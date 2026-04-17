@@ -1,4 +1,4 @@
 [submodule "firmware"]
 	path = firmware
 	url = git@github.com:pepa667/BluN64-ESP32.git
-	branch = main
+	branch = brand
