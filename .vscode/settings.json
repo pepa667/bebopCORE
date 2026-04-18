@@ -1,0 +1,6 @@
+{
+  "idf.currentSetup": "/Users/pepa/esp/release-v5.4/esp-idf",
+  "idf.flashType": "UART",
+  "idf.openOcdConfigs": ["board/esp32-wrover-kit-1.8v.cfg"],
+  "idf.port": "/dev/tty.usbserial-1420"
+}
