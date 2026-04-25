@@ -1,0 +1,673 @@
+/dev/cu.usbserial-1420'"...
+--- idf_monitor on /dev/cu.usbserial-1420 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+?ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15452
+load:0x40080400,len:3840
+0x40080400: _init at ??:?
+
+entry 0x4008064c
+I (27) boot: ESP-IDF v5.0 2nd stage bootloader
+I (27) boot: compile time 06:57:29
+I (27) boot: chip revision: v3.1
+I (30) boot_comm: chip revision: 3, min. bootloader chip revision: 0
+I (37) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (51) boot: Enabling RNG early entropy source...
+I (56) boot: Partition Table:
+I (60) boot: ## Label            Usage          Type ST Offset   Length
+I (67) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (90) boot:  3 switch_mode      OTA app          00 10 00010000 00100000
+I (97) boot:  4 blueretro_mode   OTA app          00 11 00110000 00100000
+I (105) boot: End of partition table
+I (109) boot_comm: chip revision: 3, min. application chip revision: 0
+I (116) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29ab8h (170680) map
+I (160) esp_image: segment 1: paddr=00039ae0 vaddr=3ffbdb60 size=04ad0h ( 19152) load
+I (165) esp_image: segment 2: paddr=0003e5b8 vaddr=40080000 size=01a60h (  6752) load
+I (167) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f63ch (652860) map
+I (308) esp_image: segment 4: paddr=000df664 vaddr=40081a60 size=16694h ( 91796) load
+I (332) esp_image: segment 5: paddr=000f5d00 vaddr=50000000 size=00010h (    16) load
+I (345) boot: Loaded app from partition at offset 0x10000
+I (345) boot: Disabling RNG early entropy source...
+I (356) cpu_start: Pro cpu up.
+I (356) cpu_start: Starting app cpu, entry point is 0x40081348
+0x40081348: call_start_cpu1 at /Users/pepa/esp/v5.0/esp-idf/components/esp_system/port/cpu_start.c:142
+
+I (0) cpu_start: App cpu up.
+I (373) cpu_start: Pro cpu start user code
+I (373) cpu_start: cpu freq: 160000000 Hz
+I (373) cpu_start: Application information:
+I (378) cpu_start: Project name:     n64-control-switch
+I (384) cpu_start: App version:      ae49bcc-dirty
+I (389) cpu_start: Compile time:     Apr 25 2026 06:57:19
+I (395) cpu_start: ELF file SHA256:  74ba01e9babad6da...
+I (401) cpu_start: ESP-IDF:          v5.0
+I (406) heap_init: Initializing. RAM available for dynamic allocation:
+I (413) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (419) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (425) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (431) heap_init: At 3FFC8270 len 00017D90 (95 KiB): DRAM
+I (437) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (450) heap_init: At 400980F4 len 00007F0C (31 KiB): IRAM
+I (458) spi_flash: detected chip: generic
+I (461) spi_flash: flash io: dio
+W (466) rmt(legacy): legacy driver is deprecated, please migrate to `driver/rmt_tx.h` and/or `driver/rmt_rx.h`
+I (476) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+BlueN64 Control Switch Mode. HEAP=0x000368cc
+I (503) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (510) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (519) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (528) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (538) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (547) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (556) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (565) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (575) gpio: GPIO[17]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (584) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (593) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (603) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (612) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (621) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (630) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (640) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (649) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (658) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (668) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (677) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 
+I (686) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 
+W (696) hoja_init: hoja_rumble_cb is not registered! Any incoming rumble data will be ignored!
+I (721) hoja_settings_init: Required size: 82
+I (723) hoja_settings_init: Settings loaded with magic byte 0x72623037
+I (723) hoja_settings_init: HOJA Settings initialized OK.
+I (729) hoja_init: HOJA initialized.
+BlueN64 Control Event: 
+	type: 1
+	event: 0
+	param: 0
+I (738) hoja_set_core: HOJA Core set.
+I (742) hoja_start_core: Attempting Nintendo Switch Core start...
+I (749) ns_input_stickcalibration: Nintendo Switch Core stick calibration translated.
+I (758) BTDM_INIT: BT controller compile version [8020d24]
+I (731) hoja_button_task: Starting task...
+I (768) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (1351) core_ns_start: Bluedroid initializing...
+I (1360) core_ns_start: Bluedroid enabling...
+I (1462) core_ns_start: Register HID device callback
+I (1465) core_ns_start: Starting HID Device
+I (1468) ns_bt_hidd_cb: init hidd success!
+I (1480) core_ns_start: Register HID Device app
+BlueN64 Control Event: 
+	type: 0
+	event: 0
+	param: 0
+I (1516) ns_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1519) ns_bt_hidd_cb: Register HIDD app parameters success!
+I (1520) ns_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (2501) core_ns_start: Controller already connected
+I (3501) core_ns_start: Controller already connected
+I (4501) core_ns_start: Controller already connected
+I (5501) core_ns_start: Controller already connected
+I (6501) core_ns_start: Controller already connected
+I (7501) core_ns_start: Controller already connected
+I (8501) core_ns_start: Controller already connected
+I (9501) core_ns_start: Controller already connected
+I (10501) core_ns_start: Controller already connected
+I (11501) core_ns_start: Controller already connected
+I (12501) core_ns_start: Controller already connected
+I (13501) core_ns_start: Controller already connected
+I (14501) core_ns_start: Controller already connected
+I (15501) core_ns_start: Controller already connected
+I (16501) core_ns_start: Controller already connected
+I (17501) core_ns_start: Controller already connected
+I (18501) core_ns_start: Controller already connected
+I (19501) core_ns_start: Controller already connected
+I (20501) core_ns_start: Controller already connected
+I (21501) core_ns_start: Controller already connected
+I (22501) core_ns_start: Controller already connected
+I (23501) core_ns_start: Controller already connected
+I (24501) core_ns_start: Controller already connected
+I (25501) core_ns_start: Controller already connected
+I (26501) core_ns_start: Controller already connected
+I (27501) core_ns_start: Controller already connected
+I (28501) core_ns_start: Controller already connected
+I (29501) core_ns_start: Controller already connected
+I (30501) core_ns_start: Controller already connected
+I (31501) core_ns_start: Controller already connected
+I (32501) core_ns_start: Controller already connected
+I (33501) core_ns_start: Controller already connected
+I (34501) core_ns_start: Controller already connected
+I (35501) core_ns_start: Controller already connected
+I (36501) core_ns_start: Controller already connected
+I (37501) core_ns_start: Controller already connected
+I (38501) core_ns_start: Controller already connected
+I (39501) core_ns_start: Controller already connected
+I (40501) core_ns_start: Controller already connected
+I (41501) core_ns_start: Controller already connected
+I (42501) core_ns_start: Controller already connected
+I (43501) core_ns_start: Controller already connected
+I (44501) core_ns_start: Controller already connected
+I (45501) core_ns_start: Controller already connected
+I (46501) core_ns_start: Controller already connected
+I (47501) core_ns_start: Controller already connected
+I (48501) core_ns_start: Controller already connected
+I (49501) core_ns_start: Controller already connected
+I (50501) core_ns_start: Controller already connected
+I (51501) core_ns_start: Controller already connected
+I (52501) core_ns_start: Controller already connected
+I (53501) core_ns_start: Controller already connected
+I (54501) core_ns_start: Controller already connected
+I (55501) core_ns_start: Controller already connected
+I (56501) core_ns_start: Controller already connected
+I (57501) core_ns_start: Controller already connected
+I (58501) core_ns_start: Controller already connected
+I (59501) core_ns_start: Controller already connected
+I (60501) core_ns_start: Controller already connected
+I (61501) core_ns_start: Controller already connected
+I (62501) core_ns_start: Controller already connected
+I (63501) core_ns_start: Controller already connected
+I (64501) core_ns_start: Controller already connected
+I (65501) core_ns_start: Controller already connected
+I (66501) core_ns_start: Controller already connected
+I (67501) core_ns_start: Controller already connected
+I (68501) core_ns_start: Controller already connected
+I (69501) core_ns_start: Controller already connected
+I (70501) core_ns_start: Controller already connected
+I (71501) core_ns_start: Controller already connected
+I (72501) core_ns_start: Controller already connected
+I (73501) core_ns_start: Controller already connected
+I (74501) core_ns_start: Controller already connected
+I (75501) core_ns_start: Controller already connected
+I (76501) core_ns_start: Controller already connected
+I (77501) core_ns_start: Controller already connected
+I (78501) core_ns_start: Controller already connected
+I (79501) core_ns_start: Controller already connected
+I (80501) core_ns_start: Controller already connected
+I (81501) core_ns_start: Controller already connected
+I (82501) core_ns_start: Controller already connected
+I (83501) core_ns_start: Controller already connected
+I (84501) core_ns_start: Controller already connected
+I (85501) core_ns_start: Controller already connected
+I (86501) core_ns_start: Controller already connected
+I (87501) core_ns_start: Controller already connected
+I (88501) core_ns_start: Controller already connected
+I (89501) core_ns_start: Controller already connected
+I (90501) core_ns_start: Controller already connected
+I (91501) core_ns_start: Controller already connected
+I (92501) core_ns_start: Controller already connected
+I (93501) core_ns_start: Controller already connected
+I (94501) core_ns_start: Controller already connected
+I (95501) core_ns_start: Controller already connected
+I (96501) core_ns_start: Controller already connected
+I (97501) core_ns_start: Controller already connected
+I (98501) core_ns_start: Controller already connected
+I (99501) core_ns_start: Controller already connected
+I (100501) core_ns_start: Controller already connected
+I (101501) core_ns_start: Controller already connected
+I (102501) core_ns_start: Controller already connected
+I (103501) core_ns_start: Controller already connected
+I (104501) core_ns_start: Controller already connected
+I (105501) core_ns_start: Controller already connected
+I (106501) core_ns_start: Controller already connected
+I (107501) core_ns_start: Controller already connected
+I (108501) core_ns_start: Controller already connected
+I (109501) core_ns_start: Controller already connected
+I (110501) core_ns_start: Controller already connected
+I (111501) core_ns_start: Controller already connected
+I (112501) core_ns_start: Controller already connected
+I (113501) core_ns_start: Controller already connected
+I (114501) core_ns_start: Controller already connected
+I (115501) core_ns_start: Controller already connected
+I (116501) core_ns_start: Controller already connected
+W (116752) BT_HCI: hcif conn complete: hdl 0x81, st 0x0
+W (116840) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000
+I (117235) ns_bt_gap_cb: authentication success: Nintendo Switch
+I (117236) ns_bt_gap_cb: ec c4 0d 7f bb cb 
+BlueN64 Control Event: 
+	type: 0
+	event: 4
+	param: 0
+I (117503) core_ns_start: Controller already connected
+BlueN64 Control. Switch Connected!
+W (117599) BT_APPL: new conn_srvc id:20, app_id:1
+BlueN64 Control Event: 
+	type: 0
+	event: 4
+	param: 0
+I (117601) ns_bt_hidd_cb: connected to ec:c4:0d:7f:bb:cb
+I (117605) ns_bt_hidd_cb: making self non-discoverable and non-connectable.
+W (117609) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 3200
+I (117620) ns_savepairing: Pairing to Nintendo Switch.
+I (117635) ns_savepairing: Pairing info saved.
+BlueN64 Control Event: 
+	type: 0
+	event: 2
+	param: 0
+I (117636) ns_bt_hidd_cb: Starting task short input mode...
+I (117642) ns_controller_setinputreportmode: Switching to input mode: 00ff
+I (117649) ns_controller_setinputreportmode: Starting short report mode.
+I (117661) ns_report_task_sendempty: Sending empty (0xFF) reports on core 0
+
+W (117670) BT_HCI: hci cmd send: sniff: hdl 0x81, intv(10 18)
+W (117687) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 18, status 0x0
+I (117688) ns_bt_gap_cb: power mode change: 2
+I (117689) ns_controller_setinputreportmode: Switching to input mode: 00ff
+I (117696) ns_controller_setinputreportmode: Starting short report mode.
+I (117705) ns_report_task_sendempty: Sending empty (0xFF) reports on core 0
+
+W (118617) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+I (118619) ns_bt_gap_cb: power mode change: 0
+#FEAT# ATTE2 status:0
+W (118753) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 24, status 0x0
+I (118754) ns_bt_gap_cb: power mode change: 2
+I (118755) ns_controller_setinputreportmode: Switching to input mode: 00ff
+I (118763) ns_controller_setinputreportmode: Starting short report mode.
+I (118771) ns_report_task_sendempty: Sending empty (0xFF) reports on core 0
+
+I (119537) ns_comms_handle_command: Sub-command with rumble data received.
+I (119539) ns_comms_handle_subcommand: SUBC - Get device info.
+I (119926) ns_comms_handle_command: Sub-command with rumble data received.
+I (119928) ns_comms_handle_subcommand: SUBC - Get device info.
+W (120793) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+I (120794) ns_bt_gap_cb: power mode change: 0
+#FEAT# ATTE2 status:0
+W (121107) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 24, status 0x0
+I (121108) ns_bt_gap_cb: power mode change: 2
+I (121109) ns_controller_setinputreportmode: Switching to input mode: 00ff
+I (121117) ns_controller_setinputreportmode: Starting short report mode.
+I (121125) ns_report_task_sendempty: Sending empty (0xFF) reports on core 0
+
+I (121725) ns_comms_handle_command: Sub-command with rumble data received.
+I (121727) ns_comms_handle_subcommand: SUBC - Get device info.
+I (122115) ns_comms_handle_command: Sub-command with rumble data received.
+I (122117) ns_comms_handle_subcommand: SUBC - Get device info.
+I (122145) ns_comms_handle_command: Sub-command with rumble data received.
+I (122147) ns_comms_handle_subcommand: SUBC - Set ship mode.
+I (122775) ns_comms_handle_command: Sub-command with rumble data received.
+I (122777) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 0. Len: 10 / 16
+I (122782) ns_comms_handle_subcommand: Final address: F
+I (123705) ns_comms_handle_command: Sub-command with rumble data received.
+I (123707) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 0. Len: 10 / 16
+I (123710) ns_comms_handle_subcommand: Final address: F
+I (124155) ns_comms_handle_command: Sub-command with rumble data received.
+I (124156) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 50. Len: D / 13
+I (124160) ns_comms_handle_subcommand: Final address: 5C
+I (124920) ns_comms_handle_command: Sub-command with rumble data received.
+I (124922) ns_comms_handle_subcommand: SUBC - Set input mode.
+I (124923) ns_controller_setinputreportmode: Switching to input mode: 0030
+I (124931) ns_controller_setinputreportmode: Starting standard report mode.
+I (124940) ns_report_task_sendstandard: Sending standard (0x30) reports on core 0
+
+I (125580) ns_comms_handle_command: Sub-command with rumble data received.
+I (125581) ns_comms_handle_subcommand: SUBC - Get trigger elapsed time.
+I (126345) ns_comms_handle_command: Sub-command with rumble data received.
+I (126346) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 80. Len: 18 / 24
+I (126350) ns_comms_handle_subcommand: Final address: 97
+I (127125) ns_comms_handle_command: Sub-command with rumble data received.
+I (127126) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 98. Len: 12 / 18
+I (127131) ns_comms_handle_subcommand: Final address: A9
+I (128310) ns_comms_handle_command: Sub-command with rumble data received.
+I (128311) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 98. Len: 12 / 18
+I (128316) ns_comms_handle_subcommand: Final address: A9
+I (128730) ns_comms_handle_command: Sub-command with rumble data received.
+I (128731) ns_comms_handle_subcommand: SUBC - SPI read command: 80, 10. Len: 18 / 24
+I (128736) ns_comms_handle_subcommand: Final address: 27
+I (129225) ns_comms_handle_command: Sub-command with rumble data received.
+I (129226) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 3D. Len: 19 / 25
+I (129231) ns_comms_handle_subcommand: Final address: 55
+I (130546) ns_comms_handle_command: Sub-command with rumble data received.
+I (130546) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 3D. Len: 19 / 25
+I (130551) ns_comms_handle_subcommand: Final address: 55
+I (131191) ns_comms_handle_command: Sub-command with rumble data received.
+I (131191) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 20. Len: 18 / 24
+I (131196) ns_comms_handle_subcommand: Final address: 37
+I (131836) ns_comms_handle_command: Sub-command with rumble data received.
+I (131836) ns_comms_handle_subcommand: SUBC - Enable IMU (Sixaxis).
+I (133516) ns_comms_handle_command: Sub-command with rumble data received.
+I (133518) ns_comms_handle_subcommand: SUBC - Enable IMU (Sixaxis).
+I (134099) ns_comms_handle_command: Sub-command with rumble data received.
+I (134101) ns_comms_handle_subcommand: SUBC - Set player number/lights:
+I (136020) ns_comms_handle_command: Sub-command with rumble data received.
+I (136022) ns_comms_handle_subcommand: SUBC - Set player number/lights:
+I (136740) ns_comms_handle_command: Sub-command with rumble data received.
+I (136741) ns_comms_handle_subcommand: SUBC - Vibration Enable: 1
+I (138766) ns_comms_handle_command: Sub-command with rumble data received.
+I (138766) ns_comms_handle_subcommand: SUBC - Vibration Enable: 1
+I (145966) ns_comms_handle_command: Sub-command with rumble data received.
+I (145967) ns_comms_handle_subcommand: SUBC - Vibration Enable: 1
+W (146967) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+I (146968) ns_bt_gap_cb: power mode change: 0
+#FEAT# ATTE2 status:0
+W (148152) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 8, status 0x0
+I (148154) ns_bt_gap_cb: power mode change: 2
+I (148155) ns_controller_setinputreportmode: Switching to input mode: 0030
+I (148162) ns_controller_setinputreportmode: Starting standard report mode.
+I (148171) ns_report_task_sendstandard: Sending standard (0x30) reports on core 0
+
+I (151190) ns_comms_handle_command: Sub-command with rumble data received.
+I (151190) ns_comms_handle_subcommand: SUBC - Vibration Enable: 1
+I (152989) ns_comms_handle_command: Sub-command with rumble data received.
+I (152990) ns_comms_handle_subcommand: SUBC - Set player number/lights:
+I (172559) ns_comms_handle_command: Sub-command with rumble data received.
+I (172560) ns_comms_handle_subcommand: SUBC - Set player number/lights:
+W (172572) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+I (172574) ns_bt_gap_cb: power mode change: 0
+I (172606) ns_bt_hidd_cb: ESP_HIDD_CLOSE_EVT
+BlueN64 Control Event: 
+	type: 0
+	event: 3
+	param: 0
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15452
+load:0x40080400,len:3840
+0x40080400: _init at ??:?
+
+entry 0x4008064c
+I (27) boot: ESP-IDF v5.0 2nd stage bootloader
+I (27) boot: compile time 06:57:29
+I (27) boot: chip revision: v3.1
+I (30) boot_comm: chip revision: 3, min. bootloader chip revision: 0
+I (37) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (51) boot: Enabling RNG early entropy source...
+I (56) boot: Partition Table:
+I (60) boot: ## Label            Usage          Type ST Offset   Length
+I (67) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (90) boot:  3 switch_mode      OTA app          00 10 00010000 00100000
+I (97) boot:  4 blueretro_mode   OTA app          00 11 00110000 00100000
+I (105) boot: End of partition table
+I (109) boot_comm: chip revision: 3, min. application chip revision: 0
+I (116) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=29ab8h (170680) map
+I (160) esp_image: segment 1: paddr=00039ae0 vaddr=3ffbdb60 size=04ad0h ( 19152) load
+I (164) esp_image: segment 2: paddr=0003e5b8 vaddr=40080000 size=01a60h (  6752) load
+I (167) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f63ch (652860) map
+I (308) esp_image: segment 4: paddr=000df664 vaddr=40081a60 size=16694h ( 91796) load
+I (332) esp_image: segment 5: paddr=000f5d00 vaddr=50000000 size=00010h (    16) load
+I (345) boot: Loaded app from partition at offset 0x10000
+I (345) boot: Disabling RNG early entropy source...
+I (356) cpu_start: Pro cpu up.
+I (356) cpu_start: Starting app cpu, entry point is 0x40081348
+0x40081348: call_start_cpu1 at /Users/pepa/esp/v5.0/esp-idf/components/esp_system/port/cpu_start.c:142
+
+I (343) cpu_start: App cpu up.
+I (373) cpu_start: Pro cpu start user code
+I (373) cpu_start: cpu freq: 160000000 Hz
+I (373) cpu_start: Application information:
+I (378) cpu_start: Project name:     n64-control-switch
+I (384) cpu_start: App version:      ae49bcc-dirty
+I (389) cpu_start: Compile time:     Apr 25 2026 06:57:19
+I (395) cpu_start: ELF file SHA256:  74ba01e9babad6da...
+I (401) cpu_start: ESP-IDF:          v5.0
+I (406) heap_init: Initializing. RAM available for dynamic allocation:
+I (413) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (419) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (425) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (431) heap_init: At 3FFC8270 len 00017D90 (95 KiB): DRAM
+I (438) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (444) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (450) heap_init: At 400980F4 len 00007F0C (31 KiB): IRAM
+I (458) spi_flash: detected chip: generic
+I (461) spi_flash: flash io: dio
+W (466) rmt(legacy): legacy driver is deprecated, please migrate to `driver/rmt_tx.h` and/or `driver/rmt_rx.h`
+I (476) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+BlueN64 Control Switch Mode. HEAP=0x000368cc
+I (504) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (511) gpio: GPIO[2]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (520) gpio: GPIO[4]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (529) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (539) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (548) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (557) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (566) gpio: GPIO[15]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (576) gpio: GPIO[17]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (585) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (594) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (604) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (613) gpio: GPIO[22]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (622) gpio: GPIO[23]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (631) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (641) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (650) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (659) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (669) gpio: GPIO[34]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (678) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 
+I (687) gpio: GPIO[35]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:3 
+W (697) hoja_init: hoja_rumble_cb is not registered! Any incoming rumble data will be ignored!
+I (722) hoja_settings_init: Required size: 82
+I (724) hoja_settings_init: Settings loaded with magic byte 0x72623037
+I (724) hoja_settings_init: HOJA Settings initialized OK.
+I (730) hoja_init: HOJA initialized.
+BlueN64 Control Event: 
+	type: 1
+	event: 0
+	param: 0
+I (739) hoja_set_core: HOJA Core set.
+I (743) hoja_start_core: Attempting Nintendo Switch Core start...
+I (750) ns_input_stickcalibration: Nintendo Switch Core stick calibration translated.
+I (759) BTDM_INIT: BT controller compile version [8020d24]
+I (732) hoja_button_task: Starting task...
+I (769) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (1370) core_ns_start: Bluedroid initializing...
+I (1386) core_ns_start: Bluedroid enabling...
+I (1487) core_ns_start: Register HID device callback
+I (1490) core_ns_start: Starting HID Device
+I (1493) ns_bt_hidd_cb: init hidd success!
+I (1494) core_ns_start: Register HID Device app
+I (1499) ns_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1502) ns_bt_hidd_cb: Register HIDD app parameters success!
+I (1509) ns_bt_gap_cb: UNKNOWN GAP EVT: 10
+BlueN64 Control Event: 
+	type: 0
+	event: 0
+	param: 0
+I (2524) ns_bt_hidd_cb: connecting...
+W (3525) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (3525) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (4528) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (4528) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (5530) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (5530) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (6532) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (6532) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (7534) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (7534) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (7646) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (7647) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (7650) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (8541) ns_bt_hidd_cb: connecting...
+W (9541) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (9541) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (10544) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (10544) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (11547) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (11547) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (12550) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (12550) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (13553) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (13553) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (13663) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (13663) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (13666) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (14561) ns_bt_hidd_cb: connecting...
+W (15561) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (15561) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (16564) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (16564) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (17567) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (17567) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (18570) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (18570) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (19573) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (19573) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (19683) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (19683) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (19686) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (20581) ns_bt_hidd_cb: connecting...
+W (21581) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (21581) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (22584) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (22584) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (23587) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (23587) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (24590) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (24590) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (25593) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (25593) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (25703) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (25703) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (25706) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (26601) ns_bt_hidd_cb: connecting...
+W (27601) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (27601) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (28604) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (28604) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (29607) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (29607) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (30610) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (30610) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (31613) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (31613) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (31723) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (31723) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (31726) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (32621) ns_bt_hidd_cb: connecting...
+W (33621) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (33621) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (34624) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (34624) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (35627) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (35627) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (36630) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (36630) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (37633) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (37633) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (37743) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (37743) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (37746) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (38641) ns_bt_hidd_cb: connecting...
+W (39641) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (39641) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (40644) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (40644) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (41647) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (41647) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (42650) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (42650) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (43653) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (43653) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (43763) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (43763) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (43766) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (44661) ns_bt_hidd_cb: connecting...
+W (45661) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (45661) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (46664) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (46664) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (47667) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (47667) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (48670) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (48670) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (49673) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (49673) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (49783) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (49783) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (49786) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (50681) ns_bt_hidd_cb: connecting...
+W (51681) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (51681) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (52684) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (52684) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (53687) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (53687) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (54690) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (54690) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (55693) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (55693) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (55803) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (55803) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (55806) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (56701) ns_bt_hidd_cb: connecting...
+W (57701) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (57701) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (58704) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (58704) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (59707) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (59707) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (60710) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (60710) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (61713) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (61713) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (61823) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (61823) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (61826) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (62721) ns_bt_hidd_cb: connecting...
+W (63721) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (63721) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (64724) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (64724) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (65727) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (65727) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (66730) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (66730) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (67733) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (67733) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (67843) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (67843) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (67846) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (68741) ns_bt_hidd_cb: connecting...
+W (69741) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (69741) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (70744) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (70744) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (71747) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (71747) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (72750) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (72750) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (73753) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (73753) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (73863) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (73863) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (73866) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (74761) ns_bt_hidd_cb: connecting...
+W (75761) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (75761) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (76764) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (76764) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (77767) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (77767) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (78770) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (78770) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (79773) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (79773) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (79883) BT_HIDD: hidd_l2cif_connect_cfm: connection failed, now disconnect
+W (79883) BT_HIDD: hidd_conn_disconnect: already disconnected
+W (79886) BT_HCI: hcif conn complete: hdl 0xfff, st 0x4
+I (80781) ns_bt_hidd_cb: connecting...
+W (81781) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (81781) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (82784) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (82784) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+W (83787) BT_HIDD: hidd_conn_initiate: connection already in progress
+W (83787) BT_APPL: bta_hd_connect_act: HID_DevConnect returned 9
+read failed: [Errno 6] Device not configured
+Waiting for the device to reconnect.................................................................................................................................................
