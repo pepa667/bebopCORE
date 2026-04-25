@@ -1,0 +1,8 @@
+[submodule "firmware"]
+	path = firmware
+	url = git@github.com:pepa667/BebopCORE-ESP32.git
+	branch = restart
+[submodule "webinstall"]
+	path = webinstall
+	url = git@github.com:pepa667/BebopCORE-ESP32.git
+	branch = webpage
