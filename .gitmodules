@@ -1,4 +1,0 @@
-[submodule "firmware"]
-	path = firmware
-	url = git@github.com:pepa667/BebopCORE-ESP32.git
-	branch = Clean
