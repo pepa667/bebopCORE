@@ -1,0 +1,3 @@
+Plotted to '/Users/pepa/Desktop/bebopCORE/hardware/proto/proto-F_Cu.pdf'.
+Plotted to '/Users/pepa/Desktop/bebopCORE/hardware/proto/proto-Edge_Cuts.pdf'.
+Info: Done.

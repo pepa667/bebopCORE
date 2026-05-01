@@ -6,3 +6,6 @@
 	path = webinstall
 	url = git@github.com:pepa667/BebopCORE-ESP32.git
 	branch = webpage
+[submodule "fw_v2"]
+	path = fw_v2
+	url = git@github.com:pepa667/BluControl-ESP32.git

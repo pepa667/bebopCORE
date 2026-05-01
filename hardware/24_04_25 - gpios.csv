@@ -1,0 +1,19 @@
+Net Name,GPIO,Pino Físico,Tipo,Nota
+DPAD_UP,21,D21,Input,Pull-up interno
+DPAD_DOWN,13,D13,Input,Pull-up interno
+DPAD_LEFT,14,D14,Input,Pull-up interno
+DPAD_RIGHT,27,D27,Input,Pull-up interno
+BTN_A,25,D25,Input,Pull-up interno
+BTN_B,26,D26,Input,Pull-up interno
+TRG_L,19,D19,Input,Pull-up interno
+TRG_R,23,D23,Input,Pull-up interno
+BTN_START,32,D32,Input,Pull-up interno
+BTN_SELECT,33,D33,Input,Pull-up interno
+BTN_SHIFT,18,D18,Input,PULL-UP EXTERNO OBRIGATÓRIO (10K p/ 3.3V)
+BTN_PROFILE,5,D5,Input,PULL-UP EXTERNO OBRIGATÓRIO (10K p/ 3.3V)
+BAT_SENSE,34,D34,Analog,Divisor de Tensão (Bateria p/ GND)
+LED_PWR,2,D2,Output,Resistor 220R em série
+LED_SW,4,D4,Output,Resistor 220R em série
+LED_RETRO,15,D15,Output,Resistor 220R em série
+LED_SFT,16,RX2,Output,Resistor 220R em série
+GND,GND,GND,Power,Comum para todos os botões e bateria
