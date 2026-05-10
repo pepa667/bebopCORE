@@ -1,0 +1,27 @@
+﻿2026-05-10T01:32:31.3555376Z ##[group]Run npm install
+2026-05-10T01:32:31.3555583Z [36;1mnpm install[0m
+2026-05-10T01:32:31.3555734Z [36;1mnpm run build[0m
+2026-05-10T01:32:31.3574270Z shell: /usr/bin/bash -e {0}
+2026-05-10T01:32:31.3574454Z env:
+2026-05-10T01:32:31.3574647Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:31.3574985Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:32:31.3575299Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:31.3575562Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:31.3575823Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:31.3576082Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:32:31.3576314Z   pkg_version: d64ef9a
+2026-05-10T01:32:31.3576463Z ##[endgroup]
+2026-05-10T01:32:35.2761020Z 
+2026-05-10T01:32:35.2767150Z added 38 packages, and audited 39 packages in 4s
+2026-05-10T01:32:35.2767391Z 
+2026-05-10T01:32:35.2767532Z 6 packages are looking for funding
+2026-05-10T01:32:35.2768118Z   run `npm fund` for details
+2026-05-10T01:32:35.2768313Z 
+2026-05-10T01:32:35.2768690Z found 0 vulnerabilities
+2026-05-10T01:32:35.3726259Z 
+2026-05-10T01:32:35.3726885Z > blucontrol_ota@1.0.0 build
+2026-05-10T01:32:35.3727271Z > node build.js
+2026-05-10T01:32:35.3727453Z 
+2026-05-10T01:32:35.4949900Z Processing css/main.css...
+2026-05-10T01:32:35.4953225Z Processing index.html...
+2026-05-10T01:32:35.4955765Z Processing js/main.js...

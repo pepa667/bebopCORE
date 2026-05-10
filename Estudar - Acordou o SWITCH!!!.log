@@ -1,0 +1,203 @@
+I (26708) wifi:new:<1,1>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+I (26710) wifi:station: 7a:5c:1e:ee:a0:0e join, AID=1, bgn, 40U
+I (26790) BLU OTA: station 7a:5c:1e:ee:a0:0e join, AID=1
+W (27517) wifi:<ba-add>idx:2 (ifx:1, 7a:5c:1e:ee:a0:0e), tid:0, ssn:0, winSize:64
+I (27915) esp_netif_lwip: DHCP server assigned IP to a client, IP is: 192.168.4.2
+I (41840) BLU OTA: File sending complete
+I (42066) BLU OTA: File sending complete
+I (42084) BLU OTA: File sending complete
+I (42235) BLU OTA: File sending complete
+I (66547) BLU OTA: reset_device was called
+I (66548) BLU OTA: Switching to App 0
+
+I (66548) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2a7b8h (174008) map
+I (66584) esp_image: segment 1: paddr=0013a7e0 vaddr=3ff80063 size=00008h (     8) 
+I (66586) esp_image: segment 2: paddr=0013a7f0 vaddr=3ffbdb60 size=04bb0h ( 19376) 
+I (66595) esp_image: segment 3: paddr=0013f3a8 vaddr=40080000 size=00c70h (  3184) 
+I (66600) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a19bch (661948) map
+I (66717) esp_image: segment 5: paddr=001e19e4 vaddr=40080c70 size=17c84h ( 97412) 
+I (66734) esp_image: segment 6: paddr=001f9670 vaddr=400c0000 size=00064h (   100) 
+I (66736) esp_image: segment 7: paddr=001f96dc vaddr=50000000 size=00010h (    16) 
+I (66752) wifi:station: 7a:5c:1e:ee:a0:0e leave, AID = 1, bss_flags is 134259, bss:0x3ffb9c70
+I (66754) wifi:new:<1,0>, old:<1,1>, ap:<1,1>, sta:<255,255>, prof:1
+W (66759) wifi:<ba-del>idx
+I (66761) BLU OTA: station 7a:5c:1e:ee:a0:0e leave, AID=1
+I (66841) wifi:flush txq
+I (66841) wifi:stop sw txq
+I (66842) wifi:lmac stop hw txq
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15452
+load:0x40080400,len:3840
+0x40080400: _init at ??:?
+
+entry 0x4008064c
+I (27) boot: ESP-IDF v5.0 2nd stage bootloader
+I (27) boot: compile time 00:14:52
+I (27) boot: chip revision: v3.1
+I (30) boot_comm: chip revision: 3, min. bootloader chip revision: 0
+I (37) boot.esp32: SPI Speed      : 40MHz
+I (42) boot.esp32: SPI Mode       : DIO
+I (46) boot.esp32: SPI Flash Size : 4MB
+I (51) boot: Enabling RNG early entropy source...
+I (56) boot: Partition Table:
+I (60) boot: ## Label            Usage          Type ST Offset   Length
+I (67) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (82) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (90) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (97) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (104) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (112) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (120) boot: End of partition table
+I (124) boot_comm: chip revision: 3, min. application chip revision: 0
+I (131) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2a7b8h (174008) map
+I (175) esp_image: segment 1: paddr=0013a7e0 vaddr=3ff80063 size=00008h (     8) load
+I (176) esp_image: segment 2: paddr=0013a7f0 vaddr=3ffbdb60 size=04bb0h ( 19376) load
+I (186) esp_image: segment 3: paddr=0013f3a8 vaddr=40080000 size=00c70h (  3184) load
+I (191) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a19bch (661948) map
+I (335) esp_image: segment 5: paddr=001e19e4 vaddr=40080c70 size=17c84h ( 97412) load
+I (360) esp_image: segment 6: paddr=001f9670 vaddr=400c0000 size=00064h (   100) load
+I (360) esp_image: segment 7: paddr=001f96dc vaddr=50000000 size=00010h (    16) load
+I (378) boot: Loaded app from partition at offset 0x110000
+I (378) boot: Disabling RNG early entropy source...
+I (391) cpu_start: Pro cpu up.
+I (391) cpu_start: Starting app cpu, entry point is 0x4008144c
+0x4008144c: call_start_cpu0 at /Users/pepa/esp/v5.0/esp-idf/components/esp_system/port/cpu_start.c:506 (discriminator 3)
+
+I (377) cpu_start: App cpu up.
+I (407) cpu_start: Pro cpu start user code
+I (407) cpu_start: cpu freq: 160000000 Hz
+I (407) cpu_start: Application information:
+I (412) cpu_start: Project name:     blucontrol-switch
+I (418) cpu_start: App version:      7a194fb-dirty
+I (423) cpu_start: Compile time:     May 10 2026 00:15:05
+I (429) cpu_start: ELF file SHA256:  46bcf26e...
+Warning: checksum mismatch between flashed and built applications. Checksum of built application is 27421132e162c4e105a7ee1abf1ca5ad92e6d3832c3fda0729f992d6a973fbee
+I (435) cpu_start: ESP-IDF:          v5.0
+I (440) heap_init: Initializing. RAM available for dynamic allocation:
+I (447) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (453) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (459) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (465) heap_init: At 3FFC8330 len 00017CD0 (95 KiB): DRAM
+I (471) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (477) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (484) heap_init: At 400988F4 len 0000770C (29 KiB): IRAM
+I (492) spi_flash: detected chip: generic
+I (495) spi_flash: flash io: dio
+W (499) rmt(legacy): legacy driver is deprecated, please migrate to `driver/rmt_tx.h` and/or `driver/rmt_rx.h`
+I (510) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (526) gpio: GPIO[0]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (563) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (591) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (600) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (628) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (639) gpio: GPIO[4]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (677) hoja_settings_init: Required size: 79
+I (679) hoja_settings_init: Settings loaded with magic byte 0x72623036
+I (679) hoja_settings_init: HOJA Settings initialized OK.
+I (685) hoja_init: HOJA initialized.
+I (689) hoja_set_core: HOJA Core set.
+I (693) core_ns_set_subcore: Switch Sub-Core set.
+I (699) hoja_start_core: Attempting Nintendo Switch Core start...
+I (705) ns_input_stickcalibration: Nintendo Switch Core stick calibration translated.
+I (714) util_bluetooth_init: Setting mac address...
+I (720) util_bluetooth_init: 98 41 5c 94 db dd 75 4c 
+I (725) util_bluetooth_init: BT Dual Mode enabled.
+I (731) BTDM_INIT: BT controller compile version [8020d24]
+I (687) hoja_button_task: Starting task...
+I (741) phy_init: phy_version 4670,719f9f6,Feb 18 2021,17:07:07
+I (1335) util_bluetooth_init: Bluedroid initializing...
+I (1349) util_bluetooth_init: Bluedroid enabling...
+I (1469) core_ns_start: NS Paired, attempting to connect...
+I (1474) bt_register_app: Register HID device callback
+I (1477) bt_register_app: Starting HID Device
+I (1480) bt_register_app: Register HID Device app
+I (1486) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1490) ns_bt_hidd_cb: Register HIDD app parameters success!
+I (1497) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (3009) ns_bt_hidd_cb: connecting...
+E (4308) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (4309) BT_HCI: hcif conn complete: hdl 0x81, st 0x0
+W (4317) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000
+W (4321) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 3200
+W (4424) BT_APPL: new conn_srvc id:20, app_id:1
+W (4427) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 3200
+I (4429) ns_bt_hidd_cb: connected to ec:c4:0d:7f:bb:cb
+I (4434) ns_bt_hidd_cb: making self non-discoverable and non-connectable.
+I (4442) ns_controller_input_task_set: Start input SIMPLE task...
+#FEAT# ATTE2 status:0
+W (4453) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 24, status 0x0
+I (4459) switch_bt_gap_cb: power mode change: 2
+I (4463) ns_controller_sleep_handle: Controller set to awake.
+I (4470) ns_controller_input_task_set: Start input SIMPLE task...
+I (4479) ns_report_task_sendshort: Sending short (0x3F) reports on core 0
+
+I (4635) ns_comms_handle_command: Sub-command with rumble data received.
+I (4636) ns_comms_handle_subcommand: SUBC - Get device info.
+I (4665) ns_comms_handle_command: Sub-command with rumble data received.
+I (4666) ns_comms_handle_subcommand: SUBC - Set ship mode.
+I (4695) ns_comms_handle_command: Sub-command with rumble data received.
+I (4696) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 0. Len: 10 / 16
+I (4700) ns_comms_handle_subcommand: Final address: F
+I (4738) ns_comms_handle_command: Sub-command with rumble data received.
+I (4741) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 50. Len: D / 13
+I (4746) ns_comms_handle_subcommand: Final address: 5C
+I (4785) ns_comms_handle_command: Sub-command with rumble data received.
+I (4786) ns_comms_handle_subcommand: SUBC - Set input mode.
+I (4788) ns_controller_setinputreportmode: Switching to input mode: 0030
+I (4796) ns_controller_setinputreportmode: Starting standard report mode.
+I (4803) ns_controller_input_task_set: Start input FULL task...
+I (4817) ns_report_task_sendstandard: Sending standard (0x30) reports on core 0
+
+I (4843) ns_comms_handle_command: Sub-command with rumble data received.
+I (4846) ns_comms_handle_subcommand: SUBC - Get trigger elapsed time.
+I (4875) ns_comms_handle_command: Sub-command with rumble data received.
+I (4875) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 80. Len: 18 / 24
+I (4880) ns_comms_handle_subcommand: Final address: 97
+I (4935) ns_comms_handle_command: Sub-command with rumble data received.
+I (4936) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 98. Len: 12 / 18
+I (4942) ns_comms_handle_subcommand: Final address: A9
+I (4993) ns_comms_handle_command: Sub-command with rumble data received.
+I (4996) ns_comms_handle_subcommand: SUBC - SPI read command: 80, 10. Len: 18 / 24
+I (5000) ns_comms_handle_subcommand: Final address: 27
+I (5038) ns_comms_handle_command: Sub-command with rumble data received.
+I (5041) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 3D. Len: 19 / 25
+I (5045) ns_comms_handle_subcommand: Final address: 55
+I (5115) ns_comms_handle_command: Sub-command with rumble data received.
+I (5115) ns_comms_handle_subcommand: SUBC - SPI read command: 60, 20. Len: 18 / 24
+I (5120) ns_comms_handle_subcommand: Final address: 37
+I (6010) BLU_SWITCH: Started!
+I (11938) ns_comms_handle_command: Sub-command with rumble data received.
+I (11941) ns_comms_handle_subcommand: SUBC - Enable IMU (Sixaxis).
+I (11970) ns_comms_handle_command: Sub-command with rumble data received.
+I (11971) ns_comms_handle_subcommand: SUBC - Set player number/lights: 0
+I (11998) ns_comms_handle_command: Sub-command with rumble data received.
+I (12001) ns_comms_handle_subcommand: SUBC - Vibration Enable: 1
+I (12030) ns_comms_handle_command: Sub-command with rumble data received.
+I (12031) ns_comms_handle_subcommand: SUBC - Set MCU configuration.
+I (12060) ns_comms_handle_command: Sub-command with rumble data received.
+I (12061) ns_comms_handle_subcommand: SUBC - Set player number/lights: 1
+W (14487) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+I (14488) switch_bt_gap_cb: power mode change: 0
+I (14489) ns_controller_sleep_handle: Controller set to sleep.
+#FEAT# ATTE2 status:0
+W (14587) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 8, status 0x0
+I (14588) switch_bt_gap_cb: power mode change: 2
+I (14589) ns_controller_sleep_handle: Controller set to awake.
+I (14596) ns_controller_input_task_set: Start input FULL task...
+I (14604) ns_report_task_sendstandard: Sending standard (0x30) reports on core 0

@@ -1,0 +1,972 @@
+Hard resetting via RTS pin...
+✓ Flash OK! Entrando em modo Monitor...
+Executing action: monitor
+Running idf_monitor in directory /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota
+Executing "/Users/pepa/.espressif/python_env/idf5.2_py3.9_env/bin/python /Users/pepa/esp/v5.2.3/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-1420 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/build/blucontrol-ota.elf -m '/Users/pepa/.espressif/python_env/idf5.2_py3.9_env/bin/python' '/Users/pepa/esp/v5.2.3/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-1420'"...
+--- esp-idf-monitor 1.9.0 on /dev/cu.usbserial-1420 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (45) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (55) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (470) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (641) bb_bridge: Settings loaded OK
+I (642) bb_bridge: Starting BT mode 0
+I (642) util_bluetooth_init: Setting mac address...
+I (645) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (650) util_bluetooth_init: BT Dual Mode enabled.
+I (656) BTDM_INIT: BT controller compile version [b022216]
+I (663) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (670) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1246) util_bluetooth_init: Bluedroid initializing...
+I (1258) util_bluetooth_init: Bluedroid enabling...
+I (1419) bt_register_app: Register HID device.
+I (1429) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1433) ns_bt_hidd_cb: START OK
+I (1434) ns_bt_hidd_cb: Setting to connectable, discoverable.
+I (1435) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1435) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1449) main_task: Returned from app_main()
+W (2798) BT_HCI: hcif conn complete: hdl 0x81, st 0x0
+W (2804) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000
+I (2806) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2813) switch_bt_gap_cb: ACL Connect Complete.
+I (2819) _switch_bt_task_standard: Starting input loop task...
+I (2956) switch_bt_gap_cb: authentication success: Nintendo Switch
+W (3098) BT_APPL: new conn_srvc id:20, app_id:1
+W (3101) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 3200
+I (3102) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (3105) ns_bt_hidd_cb: CONNECT OK
+W (3114) BT_HCI: hci cmd send: sniff: hdl 0x81, intv(10 18)
+W (3139) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 18, status 0x0
+W (4105) BT_HCI: hci cmd send: sniff: hdl 0x81, intv(10 18)
+W (4106) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+W (4181) BT_HCI: hcif mode change: hdl 0x81, mode 2, intv 18, status 0x0
+W (4194) BT_HCI: hci cmd send: unsniff: hdl 0x81
+I (4200) ns_bt_hidd_cb: DISCONNECT OK
+W (4213) BT_HCI: hcif mode change: hdl 0x81, mode 0, intv 0, status 0x0
+W (4416) BT_HCI: hcif link supv_to changed: hdl 0x81, supv_to 8000
+W (6577) BT_HCI: hcif disc complete: hdl 0x81, rsn 0x13
+I (6578) switch_bt_gap_cb: ACL Disconnect Complete.
+I (6579) bb_bridge: BT connected status → 0
+I (6583) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1223) util_bluetooth_init: Bluedroid initializing...
+I (1237) util_bluetooth_init: Bluedroid enabling...
+I (1357) core_bt_switch_start: Paired host found
+I (1364) bt_register_app: Register HID device.
+I (1373) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1377) ns_bt_hidd_cb: START OK
+I (1379) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1379) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1379) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1407) main_task: Returned from app_main()
+E (2681) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (2683) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (2689) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (2694) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2704) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2708) switch_bt_gap_cb: ACL Connect Complete.
+I (2717) _switch_bt_task_standard: Starting input loop task...
+W (2811) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+W (2813) BT_APPL: new conn_srvc id:20, app_id:1
+I (2814) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (2819) ns_bt_hidd_cb: CONNECT OK
+W (2825) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+ASSERT_WARN(51 9), in lc_task.c at line 1543#FEAT# ATTE2 status:0
+W (2920) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (2921) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 24, status 0x0
+W (2965) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (2966) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (3101) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 18, status 0x0
+I (3103) ns_bt_hidd_cb: DISCONNECT OK
+W (3137) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (5364) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (5365) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (5506) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x13
+I (5507) switch_bt_gap_cb: ACL Disconnect Complete.
+I (5507) bb_bridge: BT connected status → 0
+I (5512) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1234) util_bluetooth_init: Bluedroid initializing...
+I (1249) util_bluetooth_init: Bluedroid enabling...
+I (1369) core_bt_switch_start: Paired host found
+I (1376) bt_register_app: Register HID device.
+I (1386) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1390) ns_bt_hidd_cb: START OK
+I (1391) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1391) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1391) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1419) main_task: Returned from app_main()
+E (2393) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (2395) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (2402) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (2406) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2417) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2420) switch_bt_gap_cb: ACL Connect Complete.
+I (2430) _switch_bt_task_standard: Starting input loop task...
+W (2522) BT_APPL: new conn_srvc id:20, app_id:1
+W (2524) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2525) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (2529) ns_bt_hidd_cb: CONNECT OK
+W (2540) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+ASSERT_WARN(51 9), in lc_task.c at line 1543#FEAT# ATTE2 status:0
+W (2641) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (2642) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 24, status 0x0
+W (2685) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (2686) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (2822) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 18, status 0x0
+I (2826) ns_bt_hidd_cb: DISCONNECT OK
+W (2853) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (5183) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (5184) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (5328) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x13
+I (5329) switch_bt_gap_cb: ACL Disconnect Complete.
+I (5329) bb_bridge: BT connected status → 0
+I (5334) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1226) util_bluetooth_init: Bluedroid initializing...
+I (1241) util_bluetooth_init: Bluedroid enabling...
+I (1359) core_bt_switch_start: Paired host found
+I (1366) bt_register_app: Register HID device.
+I (1375) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1379) ns_bt_hidd_cb: START OK
+I (1380) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1381) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1381) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1406) main_task: Returned from app_main()
+E (3156) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (3158) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (3165) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (3169) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (3179) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (3183) switch_bt_gap_cb: ACL Connect Complete.
+I (3192) _switch_bt_task_standard: Starting input loop task...
+W (3287) BT_APPL: new conn_srvc id:20, app_id:1
+W (3289) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (3289) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (3294) ns_bt_hidd_cb: CONNECT OK
+W (3300) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+ASSERT_WARN(51 9), in lc_task.c at line 1543#FEAT# ATTE2 status:0
+W (3409) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (3410) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 24, status 0x0
+W (3453) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (3454) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (3591) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 18, status 0x0
+I (3594) ns_bt_hidd_cb: DISCONNECT OK
+W (3625) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (5974) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (5975) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (6121) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x13
+I (6121) switch_bt_gap_cb: ACL Disconnect Complete.
+I (6122) bb_bridge: BT connected status → 0
+I (6126) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1240) util_bluetooth_init: Bluedroid initializing...
+I (1255) util_bluetooth_init: Bluedroid enabling...
+I (1370) core_bt_switch_start: Paired host found
+I (1377) bt_register_app: Register HID device.
+I (1387) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1391) ns_bt_hidd_cb: START OK
+I (1392) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1393) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1395) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1420) main_task: Returned from app_main()
+E (2848) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (2851) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (2857) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (2862) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2872) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2876) switch_bt_gap_cb: ACL Connect Complete.
+I (2885) _switch_bt_task_standard: Starting input loop task...
+W (2977) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+W (2979) BT_APPL: new conn_srvc id:20, app_id:1
+I (2980) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (2985) #FEAT# ATTE2 status:0
+ns_bt_hidd_cb: CONNECT OK
+W (2992) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (2998) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 24, status 0x0
+W (3004) BT_HCI: btu_hcif_hdl_command_status,opcode:0x0803,status:0x0c
+CMD: Get device info.
+CMD: Get device info.
+CMD: Get device info.
+CMD: Set ship mode: 0
+CMD: Set ship mode: 0
+CMD: Read SPI. Address: 60, 0 | Len: 16
+CMD: Read SPI. Address: 60, 50 | Len: 13
+CMD: Read SPI. Address: 60, 50 | Len: 13
+CMD: Read SPI. Address: 60, 50 | Len: 13
+CMD: Input mode change: 30
+CMD: Get trigger ET.
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 98 | Len: 18
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 60, 3D | Len: 25
+CMD: Read SPI. Address: 60, 3D | Len: 25
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Enable IMU: 2
+CMD: Set player: 
+I (8263) bb_bridge: BT connected status → 1
+CMD: Enable vibration.
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set player: 
+I (11140) bb_bridge: BT connected status → 1
+W (12445) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (12450) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (12629) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (12630) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x23
+E (12635) BT_APPL: bta_dm_pm_btm_status hci_status=35
+W (12639) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 8, status 0x0
+W (12646) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0x1f
+W (47236) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (47243) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (47259) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 18, status 0x0
+W (47261) BT_L2CAP: L2CAP - no CCB for L2CA_DataWrite, CID: 0
+W (47268) BT_HCI: hci cmd send: unsniff: hdl 0x80
+I (47272) ns_bt_hidd_cb: DISCONNECT OK
+W (47287) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (47289) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (50375) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x13
+I (50376) switch_bt_gap_cb: ACL Disconnect Complete.
+I (50376) bb_bridge: BT connected status → 0
+I (50381) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1264) util_bluetooth_init: Bluedroid initializing...
+I (1279) util_bluetooth_init: Bluedroid enabling...
+I (1399) core_bt_switch_start: Paired host found
+I (1406) bt_register_app: Register HID device.
+I (1416) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1420) ns_bt_hidd_cb: START OK
+I (1421) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1421) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1422) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1446) main_task: Returned from app_main()
+E (2132) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (2133) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (2140) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (2146) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2155) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2166) switch_bt_gap_cb: ACL Connect Complete.
+I (2170) _switch_bt_task_standard: Starting input loop task...
+W (2240) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+W (2242) BT_APPL: new conn_srvc id:20, app_id:1
+I (2243) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (2248) ns#FEAT# ATTE2 status:0
+_bt_hidd_cb: CONNECT OK
+W (2252) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 24, status 0x0
+CMD: Get device info.
+CMD: Get device info.
+CMD: Set ship mode: 0
+CMD: Set ship mode: 0
+CMD: Set ship mode: 0
+CMD: Read SPI. Address: 60, 0 | Len: 16
+CMD: Read SPI. Address: 60, 50 | Len: 13
+CMD: Input mode change: 30
+CMD: Get trigger ET.
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 98 | Len: 18
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 60, 3D | Len: 25
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Enable IMU: 2
+CMD: Enable IMU: 2
+CMD: Enable IMU: 2
+CMD: Set player: 
+I (10152) bb_bridge: BT connected status → 1
+CMD: Enable vibration.
+CMD: Enable vibration.
+CMD: Set NFC MCU:
+CMD: Set NFC MCU:
+CMD: Set player: 
+I (11412) bb_bridge: BT connected status → 1
+CMD: Set player: 
+I (11712) bb_bridge: BT connected status → 1
+W (18326) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0
+W (18332) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (18494) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(10 18)
+W (18495) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x23
+E (18499) BT_APPL: bta_dm_pm_btm_status hci_status=35
+W (18512) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (18512) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 8, status 0x0
+W (18517) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (18521) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0x1f
+W (18529) BT_HCI: btu_hcif_hdl_command_status,opcode:0x0804,status:0x0c
+W (48549) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48550) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0x22
+W (48553) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48557) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48566) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48569) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48579) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48582) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48591) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48595) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48604) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48608) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48617) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48620) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48629) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48633) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48642) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48646) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48655) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48659) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48668) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48671) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48680) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48684) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48693) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48697) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48706) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48710) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48718) BT_HCI: hci cmd send: unsniff: hdl 0x80
+W (48723) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 0, status 0xc
+W (48732) BT_HCI: hcif disc complete: hdl 0x80, rsn 0x8
+W (48736) BT_HCI: btu_hcif_hdl_command_status,opcode:0x0804,status:0x02
+I (48744) switch_bt_gap_cb: ACL Disconnect Complete.
+I (48749) bb_bridge: BT connected status → 0
+I (48754) bb_bridge: Power code 0 → restarting
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15736
+load:0x40080400,len:3944
+--- 0x40080400: _init at ??:?
+entry 0x4008065c
+I (27) boot: ESP-IDF v5.2.3 2nd stage bootloader
+I (27) boot: compile time May 10 2026 09:15:49
+I (27) boot: Multicore bootloader
+I (32) boot: chip revision: v3.1
+I (35) boot.esp32: SPI Speed      : 40MHz
+I (40) boot.esp32: SPI Mode       : DIO
+I (44) boot.esp32: SPI Flash Size : 4MB
+I (49) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (58) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (73) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (80) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (88) boot:  3 ota_mode         OTA app          00 10 00010000 00100000
+I (95) boot:  4 switch_mode      OTA app          00 11 00110000 00100000
+I (103) boot:  5 generic_mode     OTA app          00 12 00210000 00100000
+I (110) boot:  6 www              Unknown data     01 82 00310000 00007000
+I (118) boot: End of partition table
+I (122) esp_image: segment 0: paddr=00110020 vaddr=3f400020 size=2aff4h (176116) map
+I (167) esp_image: segment 1: paddr=0013b01c vaddr=3ff80063 size=00008h (     8) load
+I (167) esp_image: segment 2: paddr=0013b02c vaddr=3ffbdb60 size=04be4h ( 19428) load
+I (177) esp_image: segment 3: paddr=0013fc18 vaddr=40080000 size=00400h (  1024) load
+I (182) esp_image: segment 4: paddr=00140020 vaddr=400d0020 size=a6ca8h (683176) map
+I (330) esp_image: segment 5: paddr=001e6cd0 vaddr=40080400 size=19f80h (106368) load
+I (358) esp_image: segment 6: paddr=00200c58 vaddr=400c0000 size=00064h (   100) load
+I (371) boot: Loaded app from partition at offset 0x110000
+I (371) boot: Disabling RNG early entropy source...
+I (383) cpu_start: Multicore app
+I (392) cpu_start: Pro cpu start user code
+I (392) cpu_start: cpu freq: 160000000 Hz
+I (392) cpu_start: Application information:
+I (395) cpu_start: Project name:     blucontrol-switch
+I (401) cpu_start: App version:      4b05430-dirty
+I (407) cpu_start: Compile time:     May 10 2026 09:30:48
+I (413) cpu_start: ELF file SHA256:  f71e19dd4b9dbffe...
+--- Warning: Checksum mismatch between flashed and built applications. Checksum of built application is e759931a1f8d655f8fdfe3c2eeffd7b2b8d7e0c18d53d6bded3a446a4ba2a5cf
+I (419) cpu_start: ESP-IDF:          v5.2.3
+I (424) cpu_start: Min chip rev:     v0.0
+I (428) cpu_start: Max chip rev:     v3.99 
+I (433) cpu_start: Chip rev:         v3.1
+I (438) heap_init: Initializing. RAM available for dynamic allocation:
+I (445) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (451) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (457) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (463) heap_init: At 3FFC88A0 len 00017760 (93 KiB): DRAM
+I (469) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (476) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (482) heap_init: At 4009A380 len 00005C80 (23 KiB): IRAM
+I (490) spi_flash: detected chip: generic
+I (493) spi_flash: flash io: dio
+I (498) coexist: coex firmware version: 27d8387
+I (503) main_task: Started on CPU0
+I (507) main_task: Calling app_main()
+I (510) BLU_SWITCH: BLU-SWITCH starting (Baseband BT)
+I (516) gpio: GPIO[2]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (526) gpio: GPIO[26]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (535) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (544) gpio: GPIO[33]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (553) gpio: GPIO[32]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (562) gpio: GPIO[21]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (572) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (581) gpio: GPIO[5]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (590) gpio: GPIO[13]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (599) gpio: GPIO[14]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (609) gpio: GPIO[27]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (618) gpio: GPIO[18]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (642) bb_bridge: Settings loaded OK
+I (643) bb_bridge: Starting BT mode 0
+I (643) util_bluetooth_init: Setting mac address...
+I (647) util_bluetooth_init: 3e a5 f4 1e 60 7e 
+I (651) util_bluetooth_init: BT Dual Mode enabled.
+I (657) BTDM_INIT: BT controller compile version [b022216]
+I (664) BTDM_INIT: Bluetooth MAC: 3e:a5:f4:1e:60:80
+I (671) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06
+I (1232) util_bluetooth_init: Bluedroid initializing...
+I (1247) util_bluetooth_init: Bluedroid enabling...
+I (1367) core_bt_switch_start: Paired host found
+I (1375) bt_register_app: Register HID device.
+I (1384) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1388) ns_bt_hidd_cb: START OK
+I (1389) ns_bt_hidd_cb: Setting to non-connectable, non-discoverable, then attempting connection.
+I (1390) switch_bt_gap_cb: UNKNOWN GAP EVT: 10
+I (1390) BLU_SWITCH: Started! BT mode: Switch Pro
+I (1415) main_task: Returned from app_main()
+E (2423) BT_BTM: btm_sec_l2cap_access_req: (initiator) remote features unknown!!sec_flags:0x4090
+
+W (2424) BT_HCI: hcif conn complete: hdl 0x80, st 0x0
+W (2431) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000
+W (2435) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+I (2445) switch_bt_gap_cb: Setting to non-connectable, non-discoverable
+I (2449) switch_bt_gap_cb: ACL Connect Complete.
+I (2458) _switch_bt_task_standard: Starting input loop task...
+W (2552) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 3200
+W (2553) BT_APPL: new conn_srvc id:20, app_id:1
+I (2554) BT_HIDD: Connected to ec:c4:0d:7f:bb:cb
+I (2559) #FEAT# ATTE2 status:0
+ns_bt_hidd_cb: CONNECT OK
+W (2563) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 8, status 0x0
+CMD: Get device info.
+CMD: Set ship mode: 0
+CMD: Read SPI. Address: 60, 0 | Len: 16
+CMD: Read SPI. Address: 60, 50 | Len: 13
+CMD: Input mode change: 30
+CMD: Get trigger ET.
+CMD: Read SPI. Address: 60, 80 | Len: 24
+CMD: Read SPI. Address: 60, 98 | Len: 18
+CMD: Read SPI. Address: 80, 10 | Len: 24
+CMD: Read SPI. Address: 60, 3D | Len: 25
+CMD: Read SPI. Address: 60, 20 | Len: 24
+CMD: Enable IMU: 2
+CMD: Set player: 
+I (2781) bb_bridge: BT connected status → 1
+CMD: Enable vibration.
+CMD: Set NFC MCU:
+CMD: Set player: 
+I (2827) bb_bridge: BT connected status → 1

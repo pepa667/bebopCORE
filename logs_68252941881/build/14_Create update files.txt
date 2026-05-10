@@ -1,0 +1,19 @@
+﻿2026-05-10T01:43:03.7204874Z ##[group]Run for folder in ./*/; \
+2026-05-10T01:43:03.7205134Z [36;1mfor folder in ./*/; \[0m
+2026-05-10T01:43:03.7205340Z [36;1mdo \[0m
+2026-05-10T01:43:03.7205844Z [36;1m  printf "\x01\x00%07d" `stat --printf="%s" $(basename $folder)/blucontrol-switch.bin` | cat - $(basename $folder)/blucontrol-switch.bin > blucontrol-switch_$(basename $folder).upd; \[0m
+2026-05-10T01:43:03.7206724Z [36;1m  printf "\x01\x01%07d" `stat --printf="%s" $(basename $folder)/blucontrol-generic.bin` | cat - $(basename $folder)/blucontrol-generic.bin > blucontrol-generic_$(basename $folder).upd; \[0m
+2026-05-10T01:43:03.7207484Z [36;1m  cat blucontrol-switch_$(basename $folder).upd blucontrol-generic_$(basename $folder).upd > blucontrol_$(basename $folder).updpkg; \[0m
+2026-05-10T01:43:03.7208144Z [36;1m[0m
+2026-05-10T01:43:03.7208474Z [36;1m  mv blucontrol_$(basename $folder).updpkg ../release/update/BluControl_$(basename $folder).updpkg; \[0m
+2026-05-10T01:43:03.7208830Z [36;1mdone[0m
+2026-05-10T01:43:03.7226570Z shell: /usr/bin/bash -e {0}
+2026-05-10T01:43:03.7226792Z env:
+2026-05-10T01:43:03.7226987Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.7227296Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:43:03.7227597Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.7227988Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.7228260Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.7228522Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:43:03.7228747Z   pkg_version: d64ef9a
+2026-05-10T01:43:03.7228898Z ##[endgroup]

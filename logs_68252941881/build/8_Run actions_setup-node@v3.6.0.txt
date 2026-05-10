@@ -1,0 +1,19 @@
+﻿2026-05-10T01:32:29.5127328Z ##[group]Run actions/setup-node@v3.6.0
+2026-05-10T01:32:29.5127540Z with:
+2026-05-10T01:32:29.5127676Z   always-auth: false
+2026-05-10T01:32:29.5127828Z   check-latest: false
+2026-05-10T01:32:29.5128285Z   token: ***
+2026-05-10T01:32:29.5128423Z env:
+2026-05-10T01:32:29.5128605Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.5128908Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:32:29.5129364Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.5129628Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.5129885Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.5130144Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:32:29.5130374Z   pkg_version: d64ef9a
+2026-05-10T01:32:29.5130518Z ##[endgroup]
+2026-05-10T01:32:29.6312055Z ##[group]Environment details
+2026-05-10T01:32:31.3474445Z node: v20.20.2
+2026-05-10T01:32:31.3474751Z npm: 10.8.2
+2026-05-10T01:32:31.3475024Z yarn: 1.22.22
+2026-05-10T01:32:31.3475386Z ##[endgroup]

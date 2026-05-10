@@ -1,0 +1,15 @@
+﻿2026-05-10T01:32:29.4687172Z ##[group]Run mkdir tmp_files
+2026-05-10T01:32:29.4687392Z [36;1mmkdir tmp_files[0m
+2026-05-10T01:32:29.4687552Z [36;1mmkdir release[0m
+2026-05-10T01:32:29.4687715Z [36;1mmkdir release/update[0m
+2026-05-10T01:32:29.4688064Z [36;1m[0m
+2026-05-10T01:32:29.4688308Z [36;1mecho "pkg_version=$(git describe --always --tags --dirty)" >> $GITHUB_ENV[0m
+2026-05-10T01:32:29.4706644Z shell: /usr/bin/bash -e {0}
+2026-05-10T01:32:29.4706822Z env:
+2026-05-10T01:32:29.4707009Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.4707335Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:32:29.4707637Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.4708007Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.4708274Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:32:29.4708538Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:32:29.4708770Z ##[endgroup]

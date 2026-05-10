@@ -1,0 +1,73 @@
+﻿2026-05-10T01:43:02.2972339Z ##[group]Run . ../esp-idf/export.sh
+2026-05-10T01:43:02.2972609Z [36;1m. ../esp-idf/export.sh[0m
+2026-05-10T01:43:02.2972785Z [36;1m[0m
+2026-05-10T01:43:02.2972997Z [36;1mfor folder in ./*/; \[0m
+2026-05-10T01:43:02.2973237Z [36;1mdo \[0m
+2026-05-10T01:43:02.2973490Z [36;1m  esptool.py --chip esp32 merge_bin -o BluControl_$(basename $folder).bin \[0m
+2026-05-10T01:43:02.2973806Z [36;1m                                0x1000 bootloader.bin \[0m
+2026-05-10T01:43:02.2974059Z [36;1m                                0x8000 partition-table.bin \[0m
+2026-05-10T01:43:02.2974304Z [36;1m                                0xd000 ota_data_initial.bin \[0m
+2026-05-10T01:43:02.2974578Z [36;1m                               0x10000 $(basename $folder)/blucontrol-ota.bin \[0m
+2026-05-10T01:43:02.2974901Z [36;1m                              0x110000 $(basename $folder)/blucontrol-switch.bin \[0m
+2026-05-10T01:43:02.2975221Z [36;1m                              0x210000 $(basename $folder)/blucontrol-generic.bin \[0m
+2026-05-10T01:43:02.2975535Z [36;1m                              0x310000 www.bin; \[0m
+2026-05-10T01:43:02.2975736Z [36;1m[0m
+2026-05-10T01:43:02.2975991Z [36;1m  mv BluControl_$(basename $folder).bin ../release/BluControl_$(basename $folder).bin; \[0m
+2026-05-10T01:43:02.2976301Z [36;1mdone[0m
+2026-05-10T01:43:02.2994381Z shell: /usr/bin/bash -e {0}
+2026-05-10T01:43:02.2994562Z env:
+2026-05-10T01:43:02.2994753Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:02.2995069Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:43:02.2995365Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:02.2995635Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:02.2995890Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:02.2996157Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:43:02.2996392Z   pkg_version: d64ef9a
+2026-05-10T01:43:02.2996630Z   IDF_TOOLS_PATH: /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools
+2026-05-10T01:43:02.2996902Z ##[endgroup]
+2026-05-10T01:43:02.3063773Z Setting IDF_PATH to '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf'
+2026-05-10T01:43:02.3064370Z Detecting the Python interpreter
+2026-05-10T01:43:02.3076966Z Checking "python3" ...
+2026-05-10T01:43:02.3282124Z Python 3.8.18
+2026-05-10T01:43:02.3283661Z "python3" has been detected
+2026-05-10T01:43:02.3283998Z Checking Python compatibility
+2026-05-10T01:43:02.3447184Z Checking other ESP-IDF version.
+2026-05-10T01:43:02.4156367Z Adding ESP-IDF tools to PATH...
+2026-05-10T01:43:02.5425763Z Checking if Python packages are up to date...
+2026-05-10T01:43:02.7668447Z /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/tools/check_python_dependencies.py:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+2026-05-10T01:43:02.7669776Z Python requirements are satisfied.
+2026-05-10T01:43:02.7670140Z   import pkg_resources
+2026-05-10T01:43:02.7792968Z Constraint file: /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/espidf.constraints.v5.0.txt
+2026-05-10T01:43:02.7793729Z Requirement files:
+2026-05-10T01:43:02.7794865Z  - /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/tools/requirements/requirements.core.txt
+2026-05-10T01:43:02.7796125Z Python being checked: /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/python_env/idf5.0_py3.8_env/bin/python
+2026-05-10T01:43:02.7896971Z Added the following directories to PATH:
+2026-05-10T01:43:02.7897659Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/esptool_py/esptool
+2026-05-10T01:43:02.7898590Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/espcoredump
+2026-05-10T01:43:02.7899282Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/partition_table
+2026-05-10T01:43:02.7899955Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/app_update
+2026-05-10T01:43:02.7901201Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/tools/xtensa-esp-elf-gdb/11.2_20220823/xtensa-esp-elf-gdb/bin
+2026-05-10T01:43:02.7902018Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin
+2026-05-10T01:43:02.7902644Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin
+2026-05-10T01:43:02.7903254Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/tools/openocd-esp32/v0.11.0-esp32-20221026/openocd-esp32/bin
+2026-05-10T01:43:02.7903798Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/tools/python_env/idf5.0_py3.8_env/bin
+2026-05-10T01:43:02.7904208Z   /home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/tools
+2026-05-10T01:43:02.8662107Z Done! You can now compile ESP-IDF projects.
+2026-05-10T01:43:02.8662458Z Go to the project directory and run:
+2026-05-10T01:43:02.8662607Z 
+2026-05-10T01:43:02.8662675Z   idf.py build
+2026-05-10T01:43:02.8662794Z 
+2026-05-10T01:43:03.3725778Z esptool.py v4.7.0
+2026-05-10T01:43:03.3726316Z Wrote 0x317000 bytes to file BluControl_gamecube.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.4296956Z esptool.py v4.7.0
+2026-05-10T01:43:03.4297436Z Wrote 0x317000 bytes to file BluControl_n64-yakara.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.4860627Z esptool.py v4.7.0
+2026-05-10T01:43:03.4861058Z Wrote 0x317000 bytes to file BluControl_n64.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.5422356Z esptool.py v4.7.0
+2026-05-10T01:43:03.5422935Z Wrote 0x317000 bytes to file BluControl_nes.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.5981785Z esptool.py v4.7.0
+2026-05-10T01:43:03.5982233Z Wrote 0x317000 bytes to file BluControl_psx_ps2.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.6546540Z esptool.py v4.7.0
+2026-05-10T01:43:03.6546968Z Wrote 0x317000 bytes to file BluControl_snes.bin, ready to flash to offset 0x0
+2026-05-10T01:43:03.7103484Z esptool.py v4.7.0
+2026-05-10T01:43:03.7103972Z Wrote 0x317000 bytes to file BluControl_universal.bin, ready to flash to offset 0x0

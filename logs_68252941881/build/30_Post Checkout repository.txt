@@ -1,0 +1,44 @@
+﻿2026-05-10T01:43:06.8429219Z Post job cleanup.
+2026-05-10T01:43:06.9183336Z [command]/usr/bin/git version
+2026-05-10T01:43:06.9212488Z git version 2.53.0
+2026-05-10T01:43:06.9244762Z Temporarily overriding HOME='/home/runner/work/_temp/ce95c4a8-3d4b-4a59-9176-dc85d9579cfc' before making global git config changes
+2026-05-10T01:43:06.9245847Z Adding repository directory to the temporary git global config as a safe directory
+2026-05-10T01:43:06.9250070Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/BluControl-ESP32/BluControl-ESP32
+2026-05-10T01:43:06.9282905Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-05-10T01:43:06.9309258Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-05-10T01:43:06.9484496Z Entering 'blu-generic/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:06.9520997Z Entering 'blu-generic/components/ESP32-BLE-Gamepad-idf'
+2026-05-10T01:43:06.9556807Z Entering 'blu-generic/components/esp-nimble-cpp'
+2026-05-10T01:43:06.9592653Z Entering 'blu-switch/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:06.9628256Z Entering 'blu-switch/components/HOJA-LIB-ESP32'
+2026-05-10T01:43:06.9677443Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-05-10T01:43:06.9694982Z http.https://github.com/.extraheader
+2026-05-10T01:43:06.9703652Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-05-10T01:43:06.9727006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-05-10T01:43:06.9899689Z Entering 'blu-generic/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:06.9919803Z http.https://github.com/.extraheader
+2026-05-10T01:43:06.9947763Z Entering 'blu-generic/components/ESP32-BLE-Gamepad-idf'
+2026-05-10T01:43:06.9967779Z http.https://github.com/.extraheader
+2026-05-10T01:43:06.9995468Z Entering 'blu-generic/components/esp-nimble-cpp'
+2026-05-10T01:43:07.0015559Z http.https://github.com/.extraheader
+2026-05-10T01:43:07.0043687Z Entering 'blu-switch/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:07.0063889Z http.https://github.com/.extraheader
+2026-05-10T01:43:07.0091540Z Entering 'blu-switch/components/HOJA-LIB-ESP32'
+2026-05-10T01:43:07.0112058Z http.https://github.com/.extraheader
+2026-05-10T01:43:07.0152515Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-10T01:43:07.0178030Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-05-10T01:43:07.0350150Z Entering 'blu-generic/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:07.0366234Z file:/home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/BluControl-SDK-ESP32/config	remote.origin.url
+2026-05-10T01:43:07.0381937Z Entering 'blu-generic/components/ESP32-BLE-Gamepad-idf'
+2026-05-10T01:43:07.0398884Z file:/home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/ESP32-BLE-Gamepad-idf/config	remote.origin.url
+2026-05-10T01:43:07.0413783Z Entering 'blu-generic/components/esp-nimble-cpp'
+2026-05-10T01:43:07.0430734Z file:/home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/esp-nimble-cpp/config	remote.origin.url
+2026-05-10T01:43:07.0446057Z Entering 'blu-switch/components/BluControl-SDK-ESP32'
+2026-05-10T01:43:07.0462744Z file:/home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-switch/components/BluControl-SDK-ESP32/config	remote.origin.url
+2026-05-10T01:43:07.0477724Z Entering 'blu-switch/components/HOJA-LIB-ESP32'
+2026-05-10T01:43:07.0494360Z file:/home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-switch/components/HOJA-LIB-ESP32-Fork/config	remote.origin.url
+2026-05-10T01:43:07.0522761Z [command]/usr/bin/git config --file /home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/BluControl-SDK-ESP32/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-10T01:43:07.0561186Z [command]/usr/bin/git config --file /home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/ESP32-BLE-Gamepad-idf/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-10T01:43:07.0584472Z [command]/usr/bin/git config --file /home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-generic/components/esp-nimble-cpp/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-10T01:43:07.0606820Z [command]/usr/bin/git config --file /home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-switch/components/BluControl-SDK-ESP32/config --name-only --get-regexp ^includeIf\.gitdir:
+2026-05-10T01:43:07.0630195Z [command]/usr/bin/git config --file /home/runner/work/BluControl-ESP32/BluControl-ESP32/.git/modules/blu-switch/components/HOJA-LIB-ESP32-Fork/config --name-only --get-regexp ^includeIf\.gitdir:

@@ -1,0 +1,722 @@
+ pepa@Nostromo  ~/Desktop/bebopCORE/fw_v2   quicktest ±  ./deploy_full.sh
+===> [GROUND-ZERO] bebopCORE AUTO-DEPLOY <===
+[Build 1/3] blu-ota
+/Users/pepa/esp/v5.0/esp-idf/tools/check_python_dependencies.py:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Executing action: all (aliases: build)
+Running ninja in directory /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/build
+Executing "ninja all"...
+[10/843] Generating ../../partition_table/partition-table.binPartition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,16K,
+otadata,data,ota,0xd000,8K,
+phy_init,data,phy,0xf000,4K,
+ota_mode,app,ota_0,0x10000,1M,encrypted
+switch_mode,app,ota_1,0x110000,1M,encrypted
+generic_mode,app,ota_2,0x210000,1M,encrypted
+www,data,spiffs,0x310000,28K,
+*******************************************************************************
+[633/843] Performing configure step for 'bootloader'-- Found Git: /usr/local/bin/git (found version "2.53.0") 
+-- The C compiler identification is GNU 11.2.0
+-- The CXX compiler identification is GNU 11.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- App "bootloader" version: v5.0
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /Users/pepa/esp/v5.0/esp-idf/components/bootloader /Users/pepa/esp/v5.0/esp-idf/components/bootloader_support /Users/pepa/esp/v5.0/esp-idf/components/efuse /Users/pepa/esp/v5.0/esp-idf/components/esp_app_format /Users/pepa/esp/v5.0/esp-idf/components/esp_common /Users/pepa/esp/v5.0/esp-idf/components/esp_hw_support /Users/pepa/esp/v5.0/esp-idf/components/esp_rom /Users/pepa/esp/v5.0/esp-idf/components/esp_system /Users/pepa/esp/v5.0/esp-idf/components/esptool_py /Users/pepa/esp/v5.0/esp-idf/components/freertos /Users/pepa/esp/v5.0/esp-idf/components/hal /Users/pepa/esp/v5.0/esp-idf/components/log /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/components/micro-ecc /Users/pepa/esp/v5.0/esp-idf/components/newlib /Users/pepa/esp/v5.0/esp-idf/components/partition_table /Users/pepa/esp/v5.0/esp-idf/components/soc /Users/pepa/esp/v5.0/esp-idf/components/spi_flash /Users/pepa/esp/v5.0/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/build/bootloader
+[100/101] Generating binary image from built executableesptool.py v4.7.0
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Generated /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/build/bootloader/bootloader.bin
+[101/101] cd /Users/pepa/Desktop/bebopCORE/..._v2/blu-ota/build/bootloader/bootloader.binBootloader binary size 0x66e0 bytes. 0x920 bytes (8%) free.
+[842/843] Generating binary image from built executableesptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /Users/pepa/Desktop/bebopCORE/fw_v2/blu-ota/build/blucontrol-ota.bin
+[843/843] cd /Users/pepa/Desktop/bebopCORE/...CORE/fw_v2/blu-ota/build/blucontrol-ota.binblucontrol-ota.bin binary size 0xc1cf0 bytes. Smallest app partition is 0x100000 bytes. 0x3e310 bytes (24%) free.
+
+Project build complete. To flash, run this command:
+/Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python ../../../../esp/v5.0/esp-idf/components/esptool_py/esptool/esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size detect --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0xd000 build/ota_data_initial.bin 0x10000 build/blucontrol-ota.bin 0x310000 build/www.bin
+or run 'idf.py -p (PORT) flash'
+[Build 2/3] blu-switch
+/Users/pepa/esp/v5.0/esp-idf/tools/check_python_dependencies.py:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Executing action: all (aliases: build)
+Running ninja in directory /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build
+Executing "ninja all"...
+[11/1178] Generating ../../partition_table/partition-table.binPartition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,16K,
+otadata,data,ota,0xd000,8K,
+phy_init,data,phy,0xf000,4K,
+ota_mode,app,ota_0,0x10000,1M,encrypted
+switch_mode,app,ota_1,0x110000,1M,encrypted
+generic_mode,app,ota_2,0x210000,1M,encrypted
+www,data,spiffs,0x310000,28K,
+*******************************************************************************
+[618/1178] Performing configure step for 'bootloader'-- Found Git: /usr/local/bin/git (found version "2.53.0") 
+-- The C compiler identification is GNU 11.2.0
+-- The CXX compiler identification is GNU 11.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building ESP-IDF components for target esp32
+-- Project sdkconfig file /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/sdkconfig
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of time_t
+-- Check size of time_t - done
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- App "bootloader" version: v5.0
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-funcs.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.ld
+-- Adding linker script /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main/ld/esp32/bootloader.rom.ld
+-- Components: bootloader bootloader_support efuse esp_app_format esp_common esp_hw_support esp_rom esp_system esptool_py freertos hal log main micro-ecc newlib partition_table soc spi_flash xtensa
+-- Component paths: /Users/pepa/esp/v5.0/esp-idf/components/bootloader /Users/pepa/esp/v5.0/esp-idf/components/bootloader_support /Users/pepa/esp/v5.0/esp-idf/components/efuse /Users/pepa/esp/v5.0/esp-idf/components/esp_app_format /Users/pepa/esp/v5.0/esp-idf/components/esp_common /Users/pepa/esp/v5.0/esp-idf/components/esp_hw_support /Users/pepa/esp/v5.0/esp-idf/components/esp_rom /Users/pepa/esp/v5.0/esp-idf/components/esp_system /Users/pepa/esp/v5.0/esp-idf/components/esptool_py /Users/pepa/esp/v5.0/esp-idf/components/freertos /Users/pepa/esp/v5.0/esp-idf/components/hal /Users/pepa/esp/v5.0/esp-idf/components/log /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/main /Users/pepa/esp/v5.0/esp-idf/components/bootloader/subproject/components/micro-ecc /Users/pepa/esp/v5.0/esp-idf/components/newlib /Users/pepa/esp/v5.0/esp-idf/components/partition_table /Users/pepa/esp/v5.0/esp-idf/components/soc /Users/pepa/esp/v5.0/esp-idf/components/spi_flash /Users/pepa/esp/v5.0/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/bootloader
+[100/101] Generating binary image from built executableesptool.py v4.7.0
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Generated /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/bootloader/bootloader.bin
+[101/101] cd /Users/pepa/Desktop/bebopCORE/.../blu-switch/build/bootloader/bootloader.binBootloader binary size 0x66e0 bytes. 0x920 bytes (8%) free.
+[1087/1178] Building C object esp-idf/blu-c...-components.dir/sticks/blu-analog-pad.c.obj/Users/pepa/Desktop/bebopCORE/fw_v2/blu-common/blu-components/sticks/blu-analog-pad.c: In function 'blu_analog_stick_get_data':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-common/blu-components/sticks/blu-analog-pad.c:53:15: warning: unused variable 'err' [-Wunused-variable]
+   53 |     esp_err_t err;
+      |               ^~~
+[1095/1178] Building C object esp-idf/blu-c...ents.dir/triggers/blu-analog-triggers.c.obj/Users/pepa/Desktop/bebopCORE/fw_v2/blu-common/blu-components/triggers/blu-analog-triggers.c: In function 'blu_analog_trigger_get_value':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-common/blu-components/triggers/blu-analog-triggers.c:45:15: warning: unused variable 'err' [-Wunused-variable]
+   45 |     esp_err_t err;
+      |               ^~~
+[1100/1178] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/main/main.h:11,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/main/main.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/main/main.h:11,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/main/main.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1103/1178] Building C object esp-idf/HOJA-...__idf_HOJA-LIB-ESP32.dir/hoja_backend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1107/1178] Building C object esp-idf/HOJA-...SP32.dir/cores/switch/core_switch_spi.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_spi.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_spi.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_spi.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_spi.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1111/1178] Building C object esp-idf/HOJA-..._idf_HOJA-LIB-ESP32.dir/hoja_settings.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_settings.h:6,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_settings.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_settings.h:6,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_settings.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1112/1178] Building C object esp-idf/HOJA-..._idf_HOJA-LIB-ESP32.dir/hoja_frontend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_frontend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_frontend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_frontend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/hoja_frontend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1115/1178] Building C object esp-idf/HOJA-...32.dir/cores/switch/core_switch_input.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_input.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_input.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_input.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_input.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1116/1178] Building C object esp-idf/HOJA-...B-ESP32.dir/cores/core_switch_backend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c: In function 'core_ns_set_subcore':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:225:49: warning: comparison between pointer and integer
+  225 |     if ( (subcore == NS_TYPE_UNSET) || (subcore == NULL) || (subcore >= NS_TYPE_MAX) )
+      |                                                 ^~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c: In function 'core_ns_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:241:15: warning: unused variable 'ret' [-Wunused-variable]
+  241 |     esp_err_t ret;
+      |               ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c: In function 'core_ns_stop':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:290:17: warning: unused variable 'TAG' [-Wunused-variable]
+  290 |     const char* TAG = "core_ns_stop";
+      |                 ^~~
+[1118/1178] Building C object esp-idf/HOJA-...r/cores/switch/core_switch_controller.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_controller.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_controller.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/esp_hid_gap.h:28,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:104,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_controller.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c: In function 'ns_controller_setup_memory':
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:432:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |            ^
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:340:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  340 | #define ESP_LOGE( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_ERROR,   tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c:18:13: note: in expansion of macro 'ESP_LOGE'
+   18 |             ESP_LOGE(TAG, "Invalid core trying to start. Defaulting to ProCon.");
+      |             ^~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_controller.c:19:9: note: here
+   19 |         case NS_TYPE_PROCON:
+      |         ^~~~
+[1119/1178] Building C object esp-idf/HOJA-....dir/cores/switch/core_switch_reports.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_reports.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_reports.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c: In function 'ns_report_task_sendshort':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:163:22: warning: unused variable 'ns_input_short_last' [-Wunused-variable]
+  163 |     ns_input_short_s ns_input_short_last = {0};
+      |                      ^~~~~~~~~~~~~~~~~~~
+[1148/1178] Building C object esp-idf/HOJA-...-LIB-ESP32.dir/utilities/util_gamepad.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_gamepad.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_gamepad.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_gamepad.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_gamepad.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1149/1178] Building C object esp-idf/HOJA-...ir/cores/switch/core_switch_vibration.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_vibration.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_vibration.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_vibration.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_vibration.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1150/1178] Building C object esp-idf/HOJA-...B-ESP32.dir/utilities/util_joybus_rmt.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_joybus_rmt.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_joybus_rmt.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_joybus_rmt.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_joybus_rmt.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1152/1178] Building C object esp-idf/HOJA-...32.dir/cores/switch/core_switch_comms.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_comms.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_comms.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/esp_hid_gap.h:28,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:104,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_comms.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c: In function 'ns_comms_handle_command':
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:432:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |            ^
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:57:13: note: in expansion of macro 'ESP_LOGI'
+   57 |             ESP_LOGI(TAG, "NFC/IR FW Update packet received.");
+      |             ^~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:59:9: note: here
+   59 |         case COMM_NFCIR_REQUEST:
+      |         ^~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/esp_hid_gap.h:28,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:104,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_switch_backend.h:5,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/switch/core_switch_comms.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:432:12: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  432 |         if ( LOG_LOCAL_LEVEL >= level ) ESP_LOG_LEVEL(level, tag, format, ##__VA_ARGS__); \
+      |            ^
+/Users/pepa/esp/v5.0/esp-idf/components/log/include/esp_log.h:342:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  342 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:60:13: note: in expansion of macro 'ESP_LOGI'
+   60 |             ESP_LOGI(TAG, "NFC/IR Data request received.");
+      |             ^~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:62:9: note: here
+   62 |         default:
+      |         ^~~~~~~
+[1153/1178] Building C object esp-idf/HOJA-...LIB-ESP32.dir/cores/core_snes_backend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_snes_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_snes_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c: In function 'core_snes_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:36:15: warning: unused variable 'ret' [-Wunused-variable]
+   36 |     esp_err_t ret;
+      |               ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c: In function 'snes_task':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:188:14: warning: unused variable 'io_num' [-Wunused-variable]
+  188 |     uint32_t io_num;
+      |              ^~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:187:15: warning: unused variable 'err' [-Wunused-variable]
+  187 |     esp_err_t err;
+      |               ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:186:13: warning: unused variable 'flip' [-Wunused-variable]
+  186 |     uint8_t flip = 0;
+      |             ^~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_snes_backend.c:75:17: warning: unused variable 'TAG' [-Wunused-variable]
+   75 |     const char* TAG = "snes_task";
+      |                 ^~~
+[1154/1178] Building C object esp-idf/HOJA-...A-LIB-ESP32.dir/utilities/util_common.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_common.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_common.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_common.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_common.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1155/1178] Building C object esp-idf/HOJA-...ESP32.dir/utilities/util_wired_detect.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_wired_detect.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_wired_detect.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c: In function 'util_wired_detect_task':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:148:73: warning: passing argument 3 of 'hoja_event_cb' makes integer from pointer without a cast [-Wint-conversion]
+  148 |                 hoja_event_cb(HOJA_EVT_WIRED, HEVT_WIRED_JOYBUS_DETECT, NULL);
+      |                                                                         ^~~~
+      |                                                                         |
+      |                                                                         void *
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:148:73: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'void *'
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:153:71: warning: passing argument 3 of 'hoja_event_cb' makes integer from pointer without a cast [-Wint-conversion]
+  153 |                 hoja_event_cb(HOJA_EVT_WIRED, HEVT_WIRED_SNES_DETECT, NULL);
+      |                                                                       ^~~~
+      |                                                                       |
+      |                                                                       void *
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:153:71: note: expected 'uint8_t' {aka 'unsigned char'} but argument is of type 'void *'
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c: In function 'util_wired_detect_loop':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:204:97: warning: passing argument 6 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  204 |     xTaskCreatePinnedToCore(util_wired_detect_task, "Wired Utility Detect Loop", 4048, NULL, 2, util_wired_loop_task, HOJA_CORE_CPU);
+      |                                                                                                 ^~~~~~~~~~~~~~~~~~~~
+      |                                                                                                 |
+      |                                                                                                 TaskHandle_t {aka struct tskTaskControlBlock *}
+In file included from /Users/pepa/esp/v5.0/esp-idf/components/esp_event/include/esp_event.h:13,
+                 from /Users/pepa/esp/v5.0/esp-idf/components/esp_hid/include/esp_hidd.h:19,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:26,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_wired_detect.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_wired_detect.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:350:62: note: expected 'struct tskTaskControlBlock ** const' but argument is of type 'TaskHandle_t' {aka 'struct tskTaskControlBlock *'}
+  350 |                                         TaskHandle_t * const pvCreatedTask,
+      |                                         ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~
+[1156/1178] Building C object esp-idf/HOJA-...-LIB-ESP32.dir/cores/core_usb_backend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_usb_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_usb_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:4: warning: "I2C_MASTER_FREQ_HZ" redefined
+    4 | #define I2C_MASTER_FREQ_HZ          200000                     /*!< I2C master clock frequency */
+      | 
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:87,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_usb_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_i2c.h:7: note: this is the location of the previous definition
+    7 | #define I2C_MASTER_FREQ_HZ          100000                     /*!< I2C master clock frequency */
+      | 
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c: In function 'core_usb_stop':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:163:17: warning: unused variable 'TAG' [-Wunused-variable]
+  163 |     const char* TAG = "core_usb_start";
+      |                 ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c: In function 'core_usb_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_usb_backend.c:237:15: warning: unused variable 'err' [-Wunused-variable]
+  237 |     esp_err_t err = ESP_OK;
+      |               ^~~
+[1157/1178] Building C object esp-idf/HOJA-...HOJA-LIB-ESP32.dir/utilities/util_i2c.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_i2c.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_i2c.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_i2c.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_i2c.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1158/1178] Building C object esp-idf/HOJA-...-LIB-ESP32.dir/utilities/util_battery.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_battery.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_battery.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c: In function 'util_battery_write':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c:65:13: warning: unused variable 'ret' [-Wunused-variable]
+   65 |     uint8_t ret = 0x00;
+      |             ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c: In function 'util_battery_set_type':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c:237:14: warning: comparison between pointer and integer
+  237 |     if (type == NULL)
+      |              ^~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c: In function 'util_battery_set_charge_rate':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_battery.c:406:20: warning: unused variable 'e' [-Wunused-variable]
+  406 |         hoja_err_t e = util_battery_write(0x4, code);
+      |                    ^
+[1159/1178] Building C object esp-idf/HOJA-...B-ESP32.dir/resources/rsc_descriptors.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/resources/rsc_descriptors.h:16,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/resources/rsc_descriptors.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/resources/rsc_descriptors.h:16,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/resources/rsc_descriptors.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+[1160/1178] Building C object esp-idf/HOJA-...JA-LIB-ESP32.dir/cores/core_bt_xinput.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_bt_xinput.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_xinput.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_bt_xinput.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_xinput.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_xinput.c: In function 'core_bt_xinput_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_xinput.c:272:15: warning: unused variable 'ret' [-Wunused-variable]
+  272 |     esp_err_t ret;
+      |               ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_xinput.c:271:17: warning: unused variable 'TAG' [-Wunused-variable]
+  271 |     const char* TAG = "core_bt_xinput_start";
+      |                 ^~~
+[1161/1178] Building C object esp-idf/HOJA-...ESP32.dir/cores/core_gamecube_backend.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:91,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c: In function 'gamecube_input_translate':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_rmt.h:107:56: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  107 | #define JB_POLL_MEM     RMTMEM.chan[JB_TX_CHANNEL_POLL].data32
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:61:12: note: in expansion of macro 'JB_POLL_MEM'
+   61 |     memcpy(JB_POLL_MEM, gcmd_poll_rmt, sizeof(rmt_item32_t) * GC_POLL_RMT_LEN);
+      |            ^~~~~~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:7,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile rmt_item32_t *'
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:91,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c: In function 'gamecube_init':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_rmt.h:105:57: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  105 | #define JB_PROBE_MEM    RMTMEM.chan[JB_TX_CHANNEL_PROBE].data32
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:264:12: note: in expansion of macro 'JB_PROBE_MEM'
+  264 |     memcpy(JB_PROBE_MEM, gcmd_probe_rmt, sizeof(rmt_item32_t) * GC_PROBE_RMT_LEN);
+      |            ^~~~~~~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:7,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile rmt_item32_t *'
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:91,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_rmt.h:106:58: warning: passing argument 1 of 'memcpy' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  106 | #define JB_ORIGIN_MEM   RMTMEM.chan[JB_TX_CHANNEL_ORIGIN].data32
+      |                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:265:12: note: in expansion of macro 'JB_ORIGIN_MEM'
+  265 |     memcpy(JB_ORIGIN_MEM, gcmd_origin_rmt, sizeof(rmt_item32_t) * GC_ORIGIN_RMT_LEN);
+      |            ^~~~~~~~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:7,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_gamecube_backend.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:1:
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h:31:18: note: expected 'void * restrict' but argument is of type 'volatile rmt_item32_t *'
+   31 | void *   memcpy (void *__restrict, const void *__restrict, size_t);
+      |                  ^
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:184:17: warning: unused variable 'TAG' [-Wunused-variable]
+  184 |     const char* TAG = "gamecube_init";
+      |                 ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c: In function 'core_gamecube_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:278:15: warning: unused variable 'er' [-Wunused-variable]
+  278 |     esp_err_t er = ESP_OK;
+      |               ^~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c: In function 'core_gamecube_stop':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_gamecube_backend.c:292:17: warning: unused variable 'TAG' [-Wunused-variable]
+  292 |     const char* TAG = "core_gamecube_stop";
+      |                 ^~~
+[1163/1178] Building C object esp-idf/HOJA-...JA-LIB-ESP32.dir/cores/core_bt_dinput.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_bt_dinput.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_bt_dinput.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:277:23: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  277 |     .report_maps    = dinput_report_maps,
+      |                       ^~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c: In function 'core_bt_dinput_start':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:289:59: warning: passing argument 2 of 'util_bluetooth_register_app' discards 'cons' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  289 |     err = util_bluetooth_register_app(&dinput_app_params, &dinput_hidd_config, true);
+      |                                                           ^~~~~~~~~~~~~~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:94,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/cores/core_bt_dinput.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:1:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_bt_hid.h:48:107: note: expected 'esp_hid_device_config_t *' but argument is of type 'const esp_hid_device_config_t *'
+   48 | hoja_err_t util_bluetooth_register_app(util_bt_app_params_s *util_bt_app_params, esp_hid_device_config_t *hidd_device_config, bool advertise);
+      |                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:285:15: warning: unused variable 'ret' [-Wunused-variable]
+  285 |     esp_err_t ret;
+      |               ^~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_bt_dinput.c:283:17: warning: unused variable 'TAG' [-Wunused-variable]
+  283 |     const char* TAG = "core_bt_dinput_start";
+      |                 ^~~
+[1166/1178] Building C object esp-idf/HOJA-...A-LIB-ESP32.dir/utilities/util_bt_hid.c.objIn file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:50,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_bt_hid.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/hoja_includes.h:52,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/include/utilities/util_bt_hid.h:4,
+                 from /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:1:
+/Users/pepa/esp/v5.0/esp-idf/components/driver/deprecated/driver/rmt.h:18:2: warning: #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h" [-Wcpp]
+   18 | #warning "The legacy RMT driver is deprecated, please use driver/rmt_tx.h and/or driver/rmt_rx.h"
+      |  ^~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c: In function 'bt_register_app':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:359:27: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  359 |         .desc_list      = hidd_device_config->report_maps[0].data,
+      |                           ^~~~~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:356:17: warning: unused variable 'desc' [-Wunused-variable]
+  356 |     const char* desc = "Gamepad";
+      |                 ^~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c: In function 'util_bluetooth_register_app':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:579:15: warning: unused variable 'ret' [-Wunused-variable]
+  579 |     esp_err_t ret;
+      |               ^~~
+At top level:
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:217:13: warning: 'util_ble_gap_cb' defined but not used [-Wunused-function]
+  217 | static void util_ble_gap_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
+      |             ^~~~~~~~~~~~~~~
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:165:13: warning: 'util_ble_hidd_cb' defined but not used [-Wunused-function]
+  165 | static void util_ble_hidd_cb(void *handler_args, esp_event_base_t base, int32_t id, void *event_data)
+      |             ^~~~~~~~~~~~~~~~
+[1176/1178] Linking CXX executable blucontrol-switch.elfFAILED: blucontrol-switch.elf obj
+: && /Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-g++ -mlongcalls -Wno-frame-address  CMakeFiles/blucontrol-switch.elf.dir/project_elf_src_esp32.c.obj -o blucontrol-switch.elf  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/app_trace/libapp_trace.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/bt/libbt.a  esp-idf/unity/libunity.a  esp-idf/cmock/libcmock.a  esp-idf/console/libconsole.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/esp_hid/libesp_hid.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/esp_lcd/libesp_lcd.a  esp-idf/protobuf-c/libprotobuf-c.a  esp-idf/protocomm/libprotocomm.a  esp-idf/esp_local_ctrl/libesp_local_ctrl.a  esp-idf/espcoredump/libespcoredump.a  esp-idf/wear_levelling/libwear_levelling.a  esp-idf/sdmmc/libsdmmc.a  esp-idf/fatfs/libfatfs.a  esp-idf/json/libjson.a  esp-idf/mqtt/libmqtt.a  esp-idf/perfmon/libperfmon.a  esp-idf/spiffs/libspiffs.a  esp-idf/ulp/libulp.a  esp-idf/wifi_provisioning/libwifi_provisioning.a  esp-idf/main/libmain.a  esp-idf/blu-components/libblu-components.a  esp-idf/BluControl-SDK-ESP32/libBluControl-SDK-ESP32.a  esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a  -Wl,--cref  -Wl,--defsym=IDF_TARGET_ESP32=0  -Wl,--Map="/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/blucontrol-switch.map"  -fno-rtti  -fno-lto  -Wl,--gc-sections  -Wl,--warn-common  esp-idf/app_trace/libapp_trace.a  esp-idf/app_trace/libapp_trace.a  -lgcov  esp-idf/app_trace/libapp_trace.a  -lgcov  esp-idf/cmock/libcmock.a  esp-idf/unity/libunity.a  esp-idf/esp_lcd/libesp_lcd.a  esp-idf/esp_local_ctrl/libesp_local_ctrl.a  esp-idf/espcoredump/libespcoredump.a  esp-idf/fatfs/libfatfs.a  esp-idf/wear_levelling/libwear_levelling.a  esp-idf/sdmmc/libsdmmc.a  esp-idf/mqtt/libmqtt.a  esp-idf/perfmon/libperfmon.a  esp-idf/spiffs/libspiffs.a  esp-idf/wifi_provisioning/libwifi_provisioning.a  esp-idf/protocomm/libprotocomm.a  esp-idf/console/libconsole.a  esp-idf/protobuf-c/libprotobuf-c.a  esp-idf/json/libjson.a  esp-idf/esp_hid/libesp_hid.a  esp-idf/bt/libbt.a  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/ulp/libulp.a  esp-idf/mbedtls/mbedtls/library/libmbedtls.a  esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a  esp-idf/mbedtls/mbedtls/library/libmbedx509.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcoexist.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcore.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libespnow.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libmesh.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libpp.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libsmartconfig.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libwapi.a  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/ulp/libulp.a  esp-idf/mbedtls/mbedtls/library/libmbedtls.a  esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a  esp-idf/mbedtls/mbedtls/library/libmbedx509.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcoexist.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcore.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libespnow.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libmesh.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libpp.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libsmartconfig.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libwapi.a  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/ulp/libulp.a  esp-idf/mbedtls/mbedtls/library/libmbedtls.a  esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a  esp-idf/mbedtls/mbedtls/library/libmbedx509.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcoexist.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcore.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libespnow.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libmesh.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libpp.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libsmartconfig.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libwapi.a  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/ulp/libulp.a  esp-idf/mbedtls/mbedtls/library/libmbedtls.a  esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a  esp-idf/mbedtls/mbedtls/library/libmbedx509.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcoexist.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcore.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libespnow.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libmesh.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libpp.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libsmartconfig.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libwapi.a  esp-idf/xtensa/libxtensa.a  esp-idf/esp_ringbuf/libesp_ringbuf.a  esp-idf/efuse/libefuse.a  esp-idf/driver/libdriver.a  esp-idf/esp_pm/libesp_pm.a  esp-idf/mbedtls/libmbedtls.a  esp-idf/esp_app_format/libesp_app_format.a  esp-idf/bootloader_support/libbootloader_support.a  esp-idf/esp_partition/libesp_partition.a  esp-idf/app_update/libapp_update.a  esp-idf/spi_flash/libspi_flash.a  esp-idf/pthread/libpthread.a  esp-idf/esp_system/libesp_system.a  esp-idf/esp_rom/libesp_rom.a  esp-idf/hal/libhal.a  esp-idf/log/liblog.a  esp-idf/heap/libheap.a  esp-idf/soc/libsoc.a  esp-idf/esp_hw_support/libesp_hw_support.a  esp-idf/freertos/libfreertos.a  esp-idf/newlib/libnewlib.a  esp-idf/cxx/libcxx.a  esp-idf/esp_common/libesp_common.a  esp-idf/esp_timer/libesp_timer.a  esp-idf/esp_event/libesp_event.a  esp-idf/nvs_flash/libnvs_flash.a  esp-idf/esp_phy/libesp_phy.a  esp-idf/vfs/libvfs.a  esp-idf/lwip/liblwip.a  esp-idf/esp_netif/libesp_netif.a  esp-idf/wpa_supplicant/libwpa_supplicant.a  esp-idf/esp_wifi/libesp_wifi.a  esp-idf/http_parser/libhttp_parser.a  esp-idf/esp-tls/libesp-tls.a  esp-idf/esp_adc/libesp_adc.a  esp-idf/esp_eth/libesp_eth.a  esp-idf/esp_gdbstub/libesp_gdbstub.a  esp-idf/tcp_transport/libtcp_transport.a  esp-idf/esp_http_client/libesp_http_client.a  esp-idf/esp_http_server/libesp_http_server.a  esp-idf/esp_https_ota/libesp_https_ota.a  esp-idf/ulp/libulp.a  esp-idf/mbedtls/mbedtls/library/libmbedtls.a  esp-idf/mbedtls/mbedtls/library/libmbedcrypto.a  esp-idf/mbedtls/mbedtls/library/libmbedx509.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcoexist.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libcore.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libespnow.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libmesh.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libnet80211.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libpp.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libsmartconfig.a  /Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32/libwapi.a  /Users/pepa/esp/v5.0/esp-idf/components/xtensa/esp32/libxt_hal.a  -u esp_app_desc  -u pthread_include_pthread_impl  -u pthread_include_pthread_cond_impl  -u pthread_include_pthread_local_storage_impl  -u pthread_include_pthread_rwlock_impl  -u ld_include_highint_hdl  -u start_app  -u start_app_other_cores  -L "/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/esp-idf/esp_system/ld"  -T memory.ld  -T sections.ld  -u __ubsan_include  -L "/Users/pepa/esp/v5.0/esp-idf/components/esp_rom/esp32/ld"  -T esp32.rom.ld  -T esp32.rom.api.ld  -T esp32.rom.libgcc.ld  -T esp32.rom.newlib-data.ld  -T esp32.rom.syscalls.ld  -T esp32.rom.newlib-funcs.ld  -Wl,--wrap=longjmp  -u __assert_func  -u esp_dport_access_reg_read  -L "/Users/pepa/esp/v5.0/esp-idf/components/soc/esp32/ld"  -T esp32.peripherals.ld  -Wl,--undefined=uxTopUsedPriority  -Wl,--undefined=FreeRTOS_openocd_params  -u app_main  -lc  -lm  esp-idf/newlib/libnewlib.a  -u newlib_include_heap_impl  -u newlib_include_syscalls_impl  -u newlib_include_pthread_impl  -u newlib_include_assert_impl  -Wl,--wrap=_Unwind_SetEnableExceptionFdeSorting  -Wl,--wrap=__register_frame_info_bases  -Wl,--wrap=__register_frame_info  -Wl,--wrap=__register_frame  -Wl,--wrap=__register_frame_info_table_bases  -Wl,--wrap=__register_frame_info_table  -Wl,--wrap=__register_frame_table  -Wl,--wrap=__deregister_frame_info_bases  -Wl,--wrap=__deregister_frame_info  -Wl,--wrap=_Unwind_Find_FDE  -Wl,--wrap=_Unwind_GetGR  -Wl,--wrap=_Unwind_GetCFA  -Wl,--wrap=_Unwind_GetIP  -Wl,--wrap=_Unwind_GetIPInfo  -Wl,--wrap=_Unwind_GetRegionStart  -Wl,--wrap=_Unwind_GetDataRelBase  -Wl,--wrap=_Unwind_GetTextRelBase  -Wl,--wrap=_Unwind_SetIP  -Wl,--wrap=_Unwind_SetGR  -Wl,--wrap=_Unwind_GetLanguageSpecificData  -Wl,--wrap=_Unwind_FindEnclosingFunction  -Wl,--wrap=_Unwind_Resume  -Wl,--wrap=_Unwind_RaiseException  -Wl,--wrap=_Unwind_DeleteException  -Wl,--wrap=_Unwind_ForcedUnwind  -Wl,--wrap=_Unwind_Resume_or_Rethrow  -Wl,--wrap=_Unwind_Backtrace  -Wl,--wrap=__cxa_call_unexpected  -Wl,--wrap=__gxx_personality_v0  -u __cxa_guard_dummy  -lstdc++  esp-idf/pthread/libpthread.a  -lgcc  esp-idf/cxx/libcxx.a  -u __cxx_fatal_exception  -L "/Users/pepa/esp/v5.0/esp-idf/components/esp_phy/lib/esp32"  -u include_esp_phy_override  -lphy  -lrtc  esp-idf/esp_phy/libesp_phy.a  -lphy  -lrtc  esp-idf/esp_phy/libesp_phy.a  -lphy  -lrtc  -u vfs_include_syscalls_impl  -L "/Users/pepa/esp/v5.0/esp-idf/components/esp_wifi/lib/esp32"  -L/Users/pepa/esp/v5.0/esp-idf/components/bt/controller/lib_esp32/esp32  -lbtdm_app  -u ld_include_hli_vectors_bt && :
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_backend.c.obj):(.literal.switch_bt_hidd_cb+0x58): undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_backend.c.obj): in function `switch_bt_hidd_cb':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:105: undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:111: undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:116: undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:122: undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_backend.c.obj):/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/core_switch_backend.c:129: more undefined references to `esp_bt_gap_set_scan_mode' follow
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_reports.c.obj): in function `ns_report_task_sendshort':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:175: undefined reference to `esp_bt_hid_device_send_report'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_reports.c.obj): in function `ns_report_task_sendstandard':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:215: undefined reference to `esp_bt_hid_device_send_report'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_reports.c.obj): in function `ns_report_task_sendempty':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_reports.c:246: undefined reference to `esp_bt_hid_device_send_report'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_comms.c.obj):(.literal.ns_comms_handle_command+0x24): undefined reference to `esp_bt_hid_device_send_report'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(core_switch_comms.c.obj): in function `ns_comms_handle_command':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/cores/switch/core_switch_comms.c:34: undefined reference to `esp_bt_hid_device_send_report'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj):(.literal.util_bluetooth_deinit+0xc): undefined reference to `esp_bt_hid_device_disconnect'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj):(.literal.util_bluetooth_deinit+0x10): undefined reference to `esp_bt_hid_device_unregister_app'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj):(.literal.util_bluetooth_deinit+0x14): undefined reference to `esp_bt_hid_device_deinit'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj):(.literal.util_bluetooth_connect+0xc): undefined reference to `esp_bt_hid_device_connect'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj): in function `util_bluetooth_deinit':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:649: undefined reference to `esp_bt_gap_set_scan_mode'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:650: undefined reference to `esp_bt_hid_device_disconnect'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:650: undefined reference to `esp_bt_hid_device_unregister_app'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:651: undefined reference to `esp_bt_hid_device_deinit'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: esp-idf/HOJA-LIB-ESP32/libHOJA-LIB-ESP32.a(util_bt_hid.c.obj): in function `util_bluetooth_connect':
+/Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:682: undefined reference to `esp_bt_hid_device_connect'
+/Users/pepa/.espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld: /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/components/HOJA-LIB-ESP32/utilities/util_bt_hid.c:690: undefined reference to `esp_bt_gap_set_scan_mode'
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+ninja failed with exit code 1, output of the command is in the /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/log/idf_py_stderr_output_76391 and /Users/pepa/Desktop/bebopCORE/fw_v2/blu-switch/build/log/idf_py_stdout_output_76391
+Falha no build de blu-switch

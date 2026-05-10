@@ -1,0 +1,96 @@
+﻿2026-05-10T01:29:40.1165583Z ##[group]Run git clone --recursive --branch v5.0 https://github.com/espressif/esp-idf.git ./esp-idf
+2026-05-10T01:29:40.1166102Z [36;1mgit clone --recursive --branch v5.0 https://github.com/espressif/esp-idf.git ./esp-idf[0m
+2026-05-10T01:29:40.1186386Z shell: /usr/bin/bash -e {0}
+2026-05-10T01:29:40.1186569Z env:
+2026-05-10T01:29:40.1186772Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:29:40.1187114Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:29:40.1187422Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:29:40.1187686Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:29:40.1188106Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:29:40.1188384Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:29:40.1188764Z ##[endgroup]
+2026-05-10T01:29:40.1235777Z Cloning into './esp-idf'...
+2026-05-10T01:30:03.8409902Z warning: refs/tags/v5.0 340dbc41c0a3eb92a90c092fbf7e7ef8c3487602 is not a commit!
+2026-05-10T01:30:03.8411427Z Note: switching to '7f5ecbe533b2666df6b10658a023b5f637320696'.
+2026-05-10T01:30:03.8411723Z 
+2026-05-10T01:30:03.8411935Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-05-10T01:30:03.8412304Z changes and commit them, and you can discard any commits you make in this
+2026-05-10T01:30:03.8412638Z state without impacting any branches by switching back to a branch.
+2026-05-10T01:30:03.8412836Z 
+2026-05-10T01:30:03.8412971Z If you want to create a new branch to retain commits you create, you may
+2026-05-10T01:30:03.8413296Z do so (now or later) by using -c with the switch command. Example:
+2026-05-10T01:30:03.8413484Z 
+2026-05-10T01:30:03.8413561Z   git switch -c <new-branch-name>
+2026-05-10T01:30:03.8413685Z 
+2026-05-10T01:30:03.8413776Z Or undo this operation with:
+2026-05-10T01:30:03.8413891Z 
+2026-05-10T01:30:03.8413949Z   git switch -
+2026-05-10T01:30:03.8414035Z 
+2026-05-10T01:30:03.8414190Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-05-10T01:30:03.8414407Z 
+2026-05-10T01:30:04.7129603Z Submodule 'components/bootloader/subproject/components/micro-ecc/micro-ecc' (https://github.com/kmackay/micro-ecc.git) registered for path 'components/bootloader/subproject/components/micro-ecc/micro-ecc'
+2026-05-10T01:30:04.7131201Z Submodule 'components/bt/controller/lib_esp32' (https://github.com/espressif/esp32-bt-lib.git) registered for path 'components/bt/controller/lib_esp32'
+2026-05-10T01:30:04.7132587Z Submodule 'components/bt/controller/lib_esp32c2/esp32c2-bt-lib' (https://github.com/espressif/esp32c2-bt-lib.git) registered for path 'components/bt/controller/lib_esp32c2/esp32c2-bt-lib'
+2026-05-10T01:30:04.7134055Z Submodule 'components/bt/controller/lib_esp32c3_family' (https://github.com/espressif/esp32c3-bt-lib.git) registered for path 'components/bt/controller/lib_esp32c3_family'
+2026-05-10T01:30:04.7135566Z Submodule 'components/bt/controller/lib_esp32h2/esp32h2-bt-lib' (https://github.com/espressif/esp32h2-bt-lib.git) registered for path 'components/bt/controller/lib_esp32h2/esp32h2-bt-lib'
+2026-05-10T01:30:04.7137722Z Submodule 'components/bt/host/nimble/nimble' (https://github.com/espressif/esp-nimble.git) registered for path 'components/bt/host/nimble/nimble'
+2026-05-10T01:30:04.7139736Z Submodule 'components/cmock/CMock' (https://github.com/ThrowTheSwitch/CMock.git) registered for path 'components/cmock/CMock'
+2026-05-10T01:30:04.7141821Z Submodule 'components/esp_phy/lib' (https://github.com/espressif/esp-phy-lib.git) registered for path 'components/esp_phy/lib'
+2026-05-10T01:30:04.7143600Z Submodule 'components/esp_wifi/lib' (https://github.com/espressif/esp32-wifi-lib.git) registered for path 'components/esp_wifi/lib'
+2026-05-10T01:30:04.7145761Z Submodule 'components/heap/tlsf' (https://github.com/espressif/tlsf.git) registered for path 'components/heap/tlsf'
+2026-05-10T01:30:04.7147831Z Submodule 'components/ieee802154/lib' (https://github.com/espressif/esp-ieee802154-lib.git) registered for path 'components/ieee802154/lib'
+2026-05-10T01:30:04.7149839Z Submodule 'components/json/cJSON' (https://github.com/DaveGamble/cJSON.git) registered for path 'components/json/cJSON'
+2026-05-10T01:30:04.7152116Z Submodule 'components/lwip/lwip' (https://github.com/espressif/esp-lwip.git) registered for path 'components/lwip/lwip'
+2026-05-10T01:30:04.7154303Z Submodule 'components/mbedtls/mbedtls' (https://github.com/espressif/mbedtls.git) registered for path 'components/mbedtls/mbedtls'
+2026-05-10T01:30:04.7156505Z Submodule 'components/mqtt/esp-mqtt' (https://github.com/espressif/esp-mqtt.git) registered for path 'components/mqtt/esp-mqtt'
+2026-05-10T01:30:04.7159395Z Submodule 'components/openthread/lib' (https://github.com/espressif/esp-thread-lib.git) registered for path 'components/openthread/lib'
+2026-05-10T01:30:04.7161515Z Submodule 'components/openthread/openthread' (https://github.com/espressif/openthread.git) registered for path 'components/openthread/openthread'
+2026-05-10T01:30:04.7163872Z Submodule 'components/protobuf-c/protobuf-c' (https://github.com/protobuf-c/protobuf-c.git) registered for path 'components/protobuf-c/protobuf-c'
+2026-05-10T01:30:04.7165618Z Submodule 'components/spiffs/spiffs' (https://github.com/pellepl/spiffs.git) registered for path 'components/spiffs/spiffs'
+2026-05-10T01:30:04.7167723Z Submodule 'components/unity/unity' (https://github.com/ThrowTheSwitch/Unity.git) registered for path 'components/unity/unity'
+2026-05-10T01:30:04.7192238Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bootloader/subproject/components/micro-ecc/micro-ecc'...
+2026-05-10T01:30:05.4358658Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bt/controller/lib_esp32'...
+2026-05-10T01:30:06.8281271Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bt/controller/lib_esp32c2/esp32c2-bt-lib'...
+2026-05-10T01:30:10.5937213Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bt/controller/lib_esp32c3_family'...
+2026-05-10T01:30:13.0744592Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bt/controller/lib_esp32h2/esp32h2-bt-lib'...
+2026-05-10T01:30:15.0126742Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/bt/host/nimble/nimble'...
+2026-05-10T01:30:17.3487302Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/cmock/CMock'...
+2026-05-10T01:30:18.2716167Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/esp_phy/lib'...
+2026-05-10T01:30:19.3944471Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/esp_wifi/lib'...
+2026-05-10T01:31:32.8188199Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/heap/tlsf'...
+2026-05-10T01:31:33.2560311Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/ieee802154/lib'...
+2026-05-10T01:31:33.9941533Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/json/cJSON'...
+2026-05-10T01:31:34.7460695Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/lwip/lwip'...
+2026-05-10T01:31:36.9906518Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/mbedtls/mbedtls'...
+2026-05-10T01:31:49.7246645Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/mqtt/esp-mqtt'...
+2026-05-10T01:31:50.5235706Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/openthread/lib'...
+2026-05-10T01:31:52.6004207Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/openthread/openthread'...
+2026-05-10T01:32:00.0335421Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/protobuf-c/protobuf-c'...
+2026-05-10T01:32:01.1887531Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/spiffs/spiffs'...
+2026-05-10T01:32:01.8314458Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/unity/unity'...
+2026-05-10T01:32:02.9446805Z Submodule path 'components/bootloader/subproject/components/micro-ecc/micro-ecc': checked out 'd037ec89546fad14b5c4d5456c2e23a71e554966'
+2026-05-10T01:32:02.9653143Z Submodule path 'components/bt/controller/lib_esp32': checked out 'dbaeb136cacf8c7d071f838c1053f90299f57720'
+2026-05-10T01:32:02.9844652Z Submodule path 'components/bt/controller/lib_esp32c2/esp32c2-bt-lib': checked out 'c1f0e3be6c1211cceb94175127e793b77355bbfb'
+2026-05-10T01:32:02.9978475Z Submodule path 'components/bt/controller/lib_esp32c3_family': checked out '4dd1838c81fc41eab863e284a53f029faab5372d'
+2026-05-10T01:32:03.0205326Z Submodule path 'components/bt/controller/lib_esp32h2/esp32h2-bt-lib': checked out '8bf4c4c2cb1f964122977c9995863f325346411d'
+2026-05-10T01:32:03.1064166Z Submodule path 'components/bt/host/nimble/nimble': checked out '94adb077f2cf94454f52b9f084d5256c3eb88593'
+2026-05-10T01:32:03.1328377Z Submodule path 'components/cmock/CMock': checked out 'eeecc49ce8af123cf8ad40efdb9673e37b56230f'
+2026-05-10T01:32:03.1367856Z Submodule 'vendor/c_exception' (https://github.com/throwtheswitch/cexception.git) registered for path 'components/cmock/CMock/vendor/c_exception'
+2026-05-10T01:32:03.1371560Z Submodule 'vendor/unity' (https://github.com/throwtheswitch/unity.git) registered for path 'components/cmock/CMock/vendor/unity'
+2026-05-10T01:32:03.1394526Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/cmock/CMock/vendor/c_exception'...
+2026-05-10T01:32:03.6740486Z Cloning into '/home/runner/work/BluControl-ESP32/BluControl-ESP32/esp-idf/components/cmock/CMock/vendor/unity'...
+2026-05-10T01:32:04.7625667Z Submodule path 'components/cmock/CMock/vendor/c_exception': checked out '71b47be7c950f1bf5f7e5303779fa99a16224bb6'
+2026-05-10T01:32:04.7800060Z Submodule path 'components/cmock/CMock/vendor/unity': checked out 'cf949f45ca6d172a177b00da21310607b97bc7a7'
+2026-05-10T01:32:04.8000526Z Submodule path 'components/esp_phy/lib': checked out '8d3ce02436066e33e8964d34981a97fe64edae2e'
+2026-05-10T01:32:04.8898026Z Submodule path 'components/esp_wifi/lib': checked out '51e2668fd4e6416f8ad6292e846e177e7d3859bd'
+2026-05-10T01:32:04.8982685Z Submodule path 'components/heap/tlsf': checked out 'ab17d6798d1561758827b6553d56d57f19aa4d66'
+2026-05-10T01:32:04.9072613Z Submodule path 'components/ieee802154/lib': checked out '2b52a261fef2ad7b630e11866dca567d17170401'
+2026-05-10T01:32:04.9266497Z Submodule path 'components/json/cJSON': checked out 'd348621ca93571343a56862df7de4ff3bc9b5667'
+2026-05-10T01:32:04.9720856Z Submodule path 'components/lwip/lwip': checked out '9bad641bc7378d2eb1ba84834baafaf119135206'
+2026-05-10T01:32:05.1073623Z Submodule path 'components/mbedtls/mbedtls': checked out '7b428b1bf260ce1fec4e3ffb6494070d439a3a67'
+2026-05-10T01:32:05.1237195Z Submodule path 'components/mqtt/esp-mqtt': checked out 'ae53d799da294f03ef65c33e88fa33648e638134'
+2026-05-10T01:32:05.1458658Z Submodule path 'components/openthread/lib': checked out '698e8386c31f2c34e167b65f72a6b2553e838dd9'
+2026-05-10T01:32:05.3827312Z Submodule path 'components/openthread/openthread': checked out 'e64ba13faa865aa7febd5cb7dc7eb52ff19a2c5c'
+2026-05-10T01:32:05.3963255Z Submodule path 'components/protobuf-c/protobuf-c': checked out 'f224ab2eeb648a818eb20687d7150a285442c907'
+2026-05-10T01:32:05.4067130Z Submodule path 'components/spiffs/spiffs': checked out '0dbb3f71c5f6fae3747a9d935372773762baf852'
+2026-05-10T01:32:05.4282727Z Submodule path 'components/unity/unity': checked out '7d2bf62b7e6afaf38153041a9d53c21aeeca9a25'

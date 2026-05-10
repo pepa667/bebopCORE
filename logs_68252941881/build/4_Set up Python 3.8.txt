@@ -1,0 +1,37 @@
+﻿2026-05-10T01:29:31.3704531Z ##[group]Run actions/setup-python@v5
+2026-05-10T01:29:31.3704764Z with:
+2026-05-10T01:29:31.3704912Z   python-version: 3.8
+2026-05-10T01:29:31.3705071Z   check-latest: false
+2026-05-10T01:29:31.3705318Z   token: ***
+2026-05-10T01:29:31.3705474Z   update-environment: true
+2026-05-10T01:29:31.3705652Z   allow-prereleases: false
+2026-05-10T01:29:31.3705817Z   freethreaded: false
+2026-05-10T01:29:31.3705964Z ##[endgroup]
+2026-05-10T01:29:31.5012548Z ##[group]Installed versions
+2026-05-10T01:29:31.6231604Z Version 3.8 was not found in the local cache
+2026-05-10T01:29:32.4698764Z Version 3.8 is available for downloading
+2026-05-10T01:29:32.4700201Z Download from "https://github.com/actions/python-versions/releases/download/3.8.18-12303122501/python-3.8.18-linux-24.04-x64.tar.gz"
+2026-05-10T01:29:33.0654200Z Extract downloaded archive
+2026-05-10T01:29:33.0749721Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/928e2853-71aa-42b3-a318-0bdc105da5bb -f /home/runner/work/_temp/23ddabb1-21a2-45d3-9271-2c1854524074
+2026-05-10T01:29:34.1970798Z Execute installation script
+2026-05-10T01:29:34.2044125Z Check if Python hostedtoolcache folder exist...
+2026-05-10T01:29:34.2044602Z Create Python 3.8.18 folder
+2026-05-10T01:29:34.2055143Z Copy Python binaries to hostedtoolcache folder
+2026-05-10T01:29:34.5298658Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-05-10T01:29:34.5331499Z Upgrading pip...
+2026-05-10T01:29:37.6241338Z Looking in links: /tmp/tmp9sz7_h03
+2026-05-10T01:29:37.6243521Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (56.0.0)
+2026-05-10T01:29:37.6246995Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.8.18/x64/lib/python3.8/site-packages (23.0.1)
+2026-05-10T01:29:39.2486662Z Collecting pip
+2026-05-10T01:29:39.2780194Z Downloading pip-25.0.1-py3-none-any.whl (1.8 MB)
+2026-05-10T01:29:39.3297423Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 37.2 MB/s eta 0:00:00
+2026-05-10T01:29:39.3297830Z 
+2026-05-10T01:29:39.3548896Z Installing collected packages: pip
+2026-05-10T01:29:39.3549984Z Attempting uninstall: pip
+2026-05-10T01:29:39.3554780Z Found existing installation: pip 23.0.1
+2026-05-10T01:29:39.4959411Z Uninstalling pip-23.0.1:
+2026-05-10T01:29:39.5015186Z Successfully uninstalled pip-23.0.1
+2026-05-10T01:29:40.0574910Z Successfully installed pip-25.0.1
+2026-05-10T01:29:40.1017491Z Create complete file
+2026-05-10T01:29:40.1055523Z Successfully set up CPython (3.8.18)
+2026-05-10T01:29:40.1056504Z ##[endgroup]

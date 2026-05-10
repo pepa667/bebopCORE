@@ -1,0 +1,32 @@
+﻿2026-05-10T01:43:03.8276053Z ##[group]Run actions/upload-artifact@v4
+2026-05-10T01:43:03.8276275Z with:
+2026-05-10T01:43:03.8276418Z   name: BluControl_d64ef9a
+2026-05-10T01:43:03.8276657Z   path: release/BluControl*.bin
+release/update/BluControl*.updpkg
+
+2026-05-10T01:43:03.8276913Z   if-no-files-found: error
+2026-05-10T01:43:03.8277191Z   compression-level: 6
+2026-05-10T01:43:03.8277420Z   overwrite: false
+2026-05-10T01:43:03.8277575Z   include-hidden-files: false
+2026-05-10T01:43:03.8277743Z env:
+2026-05-10T01:43:03.8278131Z   pythonLocation: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.8278435Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib/pkgconfig
+2026-05-10T01:43:03.8278726Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.8278994Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.8279249Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.8.18/x64
+2026-05-10T01:43:03.8279510Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.8.18/x64/lib
+2026-05-10T01:43:03.8279768Z   pkg_version: d64ef9a
+2026-05-10T01:43:03.8279922Z ##[endgroup]
+2026-05-10T01:43:03.9982093Z With the provided path, there will be 14 files uploaded
+2026-05-10T01:43:03.9985352Z Artifact name is valid!
+2026-05-10T01:43:03.9986284Z Root directory input is valid!
+2026-05-10T01:43:04.2987185Z Beginning upload of artifact content to blob storage
+2026-05-10T01:43:05.7733234Z Uploaded bytes 8388608
+2026-05-10T01:43:06.1297098Z Uploaded bytes 16777216
+2026-05-10T01:43:06.3108601Z Uploaded bytes 17245295
+2026-05-10T01:43:06.3951633Z Finished uploading artifact content to blob storage!
+2026-05-10T01:43:06.3954545Z SHA256 digest of uploaded artifact zip is ed33c670fb6abf2eca71def2f9a2af0111c888e73e7e28e7cfef33a31815a0f6
+2026-05-10T01:43:06.3955735Z Finalizing artifact upload
+2026-05-10T01:43:06.5918342Z Artifact BluControl_d64ef9a.zip successfully finalized. Artifact ID 6900099030
+2026-05-10T01:43:06.5919328Z Artifact BluControl_d64ef9a has been successfully uploaded! Final size is 17245295 bytes. Artifact ID is 6900099030
+2026-05-10T01:43:06.5924528Z Artifact download URL: https://github.com/pepa667/BluControl-ESP32/actions/runs/25616582349/artifacts/6900099030
