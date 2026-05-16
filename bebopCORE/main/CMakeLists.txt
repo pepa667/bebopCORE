@@ -1,0 +1,23 @@
+idf_component_register(
+    SRCS
+        "app_state.c"
+        "battery.c"
+        "main.c"
+        "input.c"
+        "input_gpio.c"
+        "input_matrix.c"
+        "storage.c"
+        "protocol_manager.c"
+        "status_leds.c"
+        "power_led.c"
+        "bt_manager.c"
+        "bt_switch.c"
+    INCLUDE_DIRS
+        "."
+        "include"
+    REQUIRES
+        bt
+        esp_driver_gpio
+        esp_adc
+        nvs_flash
+)

@@ -1,0 +1,91 @@
+#include <string.h>
+
+#include "driver/gpio.h"
+#include "sdkconfig.h"
+
+#include "input_gpio.h"
+
+#define BEBOPCORE_GPIO_BTN_A ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_A)
+#define BEBOPCORE_GPIO_BTN_B ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_B)
+#define BEBOPCORE_GPIO_BTN_X ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_X)
+#define BEBOPCORE_GPIO_BTN_Y ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_Y)
+#define BEBOPCORE_GPIO_BTN_DPAD_RIGHT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_DPAD_RIGHT)
+#define BEBOPCORE_GPIO_BTN_DPAD_DOWN ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_DPAD_DOWN)
+#define BEBOPCORE_GPIO_BTN_DPAD_LEFT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_DPAD_LEFT)
+#define BEBOPCORE_GPIO_BTN_DPAD_UP ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_DPAD_UP)
+#define BEBOPCORE_GPIO_BTN_L ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_L)
+#define BEBOPCORE_GPIO_BTN_ZL ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_ZL)
+#define BEBOPCORE_GPIO_BTN_R ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_R)
+#define BEBOPCORE_GPIO_BTN_ZR ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_ZR)
+#define BEBOPCORE_GPIO_BTN_START ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_START)
+#define BEBOPCORE_GPIO_BTN_SELECT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_SELECT)
+#define BEBOPCORE_GPIO_BTN_HOME ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_HOME)
+#define BEBOPCORE_GPIO_BTN_CAPTURE ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_CAPTURE)
+#define BEBOPCORE_GPIO_BTN_STICK_LEFT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_STICK_LEFT)
+#define BEBOPCORE_GPIO_BTN_STICK_RIGHT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_STICK_RIGHT)
+#define BEBOPCORE_GPIO_BTN_SHIFT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_SHIFT)
+#define BEBOPCORE_GPIO_BTN_PROTOCOL ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_PROTOCOL)
+
+static bool s_active_low = true;
+
+static const gpio_num_t s_button_pins[BEBOPCORE_BUTTON_COUNT] = {
+    [BEBOPCORE_BUTTON_A] = BEBOPCORE_GPIO_BTN_A,
+    [BEBOPCORE_BUTTON_B] = BEBOPCORE_GPIO_BTN_B,
+    [BEBOPCORE_BUTTON_X] = BEBOPCORE_GPIO_BTN_X,
+    [BEBOPCORE_BUTTON_Y] = BEBOPCORE_GPIO_BTN_Y,
+    [BEBOPCORE_BUTTON_DPAD_RIGHT] = BEBOPCORE_GPIO_BTN_DPAD_RIGHT,
+    [BEBOPCORE_BUTTON_DPAD_DOWN] = BEBOPCORE_GPIO_BTN_DPAD_DOWN,
+    [BEBOPCORE_BUTTON_DPAD_LEFT] = BEBOPCORE_GPIO_BTN_DPAD_LEFT,
+    [BEBOPCORE_BUTTON_DPAD_UP] = BEBOPCORE_GPIO_BTN_DPAD_UP,
+    [BEBOPCORE_BUTTON_L] = BEBOPCORE_GPIO_BTN_L,
+    [BEBOPCORE_BUTTON_ZL] = BEBOPCORE_GPIO_BTN_ZL,
+    [BEBOPCORE_BUTTON_R] = BEBOPCORE_GPIO_BTN_R,
+    [BEBOPCORE_BUTTON_ZR] = BEBOPCORE_GPIO_BTN_ZR,
+    [BEBOPCORE_BUTTON_START] = BEBOPCORE_GPIO_BTN_START,
+    [BEBOPCORE_BUTTON_SELECT] = BEBOPCORE_GPIO_BTN_SELECT,
+    [BEBOPCORE_BUTTON_HOME] = BEBOPCORE_GPIO_BTN_HOME,
+    [BEBOPCORE_BUTTON_CAPTURE] = BEBOPCORE_GPIO_BTN_CAPTURE,
+    [BEBOPCORE_BUTTON_STICK_LEFT] = BEBOPCORE_GPIO_BTN_STICK_LEFT,
+    [BEBOPCORE_BUTTON_STICK_RIGHT] = BEBOPCORE_GPIO_BTN_STICK_RIGHT,
+    [BEBOPCORE_BUTTON_SHIFT] = BEBOPCORE_GPIO_BTN_SHIFT,
+    [BEBOPCORE_BUTTON_PROTOCOL] = BEBOPCORE_GPIO_BTN_PROTOCOL,
+};
+
+void input_gpio_init(bool active_low)
+{
+    s_active_low = active_low;
+
+    gpio_config_t cfg = {
+        .pin_bit_mask = 0,
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = active_low ? GPIO_PULLUP_ENABLE : GPIO_PULLUP_DISABLE,
+        .pull_down_en = active_low ? GPIO_PULLDOWN_DISABLE : GPIO_PULLDOWN_ENABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+
+    for (int i = 0; i < BEBOPCORE_BUTTON_COUNT; i++)
+    {
+        if (s_button_pins[i] >= 0)
+        {
+            cfg.pin_bit_mask |= (1ULL << s_button_pins[i]);
+        }
+    }
+
+    gpio_config(&cfg);
+}
+
+void input_gpio_read(bebopCORE_input_state_t *state)
+{
+    memset(state, 0, sizeof(*state));
+
+    for (int i = 0; i < BEBOPCORE_BUTTON_COUNT; i++)
+    {
+        if (s_button_pins[i] < 0)
+        {
+            continue;
+        }
+
+        int level = gpio_get_level(s_button_pins[i]);
+        state->buttons[i] = s_active_low ? (level == 0) : (level != 0);
+    }
+}

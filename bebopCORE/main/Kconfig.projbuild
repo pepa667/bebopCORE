@@ -1,0 +1,297 @@
+menu "bebopCORE Configuration"
+
+    choice BEBOPCORE_INPUT_BACKEND
+        prompt "Input backend"
+        default BEBOPCORE_INPUT_BACKEND_GPIO
+        help
+            Select whether the firmware reads buttons from dedicated GPIOs or
+            from the future matrix scanner.
+
+        config BEBOPCORE_INPUT_BACKEND_GPIO
+            bool "GPIO direct"
+
+        config BEBOPCORE_INPUT_BACKEND_MATRIX
+            bool "Matrix scanner"
+    endchoice
+
+    config BEBOPCORE_INPUT_ACTIVE_LOW
+        bool "Inputs are active low"
+        default y
+        help
+            Enable this when buttons pull the line to ground when pressed.
+
+    menu "GPIO backend pins"
+        visible if BEBOPCORE_INPUT_BACKEND_GPIO
+
+        config BEBOPCORE_GPIO_BTN_A
+            int "A button GPIO"
+            range -1 39
+            default 13
+
+        config BEBOPCORE_GPIO_BTN_B
+            int "B button GPIO"
+            range -1 39
+            default 12
+
+        config BEBOPCORE_GPIO_BTN_X
+            int "X button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_Y
+            int "Y button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_DPAD_RIGHT
+            int "D-Pad right GPIO"
+            range -1 39
+            default 26
+
+        config BEBOPCORE_GPIO_BTN_DPAD_DOWN
+            int "D-Pad down GPIO"
+            range -1 39
+            default 32
+
+        config BEBOPCORE_GPIO_BTN_DPAD_LEFT
+            int "D-Pad left GPIO"
+            range -1 39
+            default 25
+
+        config BEBOPCORE_GPIO_BTN_DPAD_UP
+            int "D-Pad up GPIO"
+            range -1 39
+            default 33
+
+        config BEBOPCORE_GPIO_BTN_L
+            int "L button GPIO"
+            range -1 39
+            default 16
+
+        config BEBOPCORE_GPIO_BTN_ZL
+            int "ZL button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_R
+            int "R button GPIO"
+            range -1 39
+            default 4
+
+        config BEBOPCORE_GPIO_BTN_ZR
+            int "ZR button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_START
+            int "START button GPIO"
+            range -1 39
+            default 27
+
+        config BEBOPCORE_GPIO_BTN_SELECT
+            int "SELECT button GPIO"
+            range -1 39
+            default 14
+
+        config BEBOPCORE_GPIO_BTN_HOME
+            int "HOME button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_CAPTURE
+            int "CAPTURE button GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_STICK_LEFT
+            int "Left stick click GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_STICK_RIGHT
+            int "Right stick click GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_BTN_SHIFT
+            int "SHIFT button GPIO"
+            range -1 39
+            default 17
+
+        config BEBOPCORE_GPIO_BTN_PROTOCOL
+            int "PROTOCOL button GPIO"
+            range -1 39
+            default 5
+    endmenu
+
+    menu "Matrix backend pins"
+        visible if BEBOPCORE_INPUT_BACKEND_MATRIX
+
+        config BEBOPCORE_MATRIX_ROW_0_GPIO
+            int "Matrix row 0 GPIO"
+            range -1 39
+            default 21
+
+        config BEBOPCORE_MATRIX_ROW_1_GPIO
+            int "Matrix row 1 GPIO"
+            range -1 39
+            default 22
+
+        config BEBOPCORE_MATRIX_ROW_2_GPIO
+            int "Matrix row 2 GPIO"
+            range -1 39
+            default 23
+
+        config BEBOPCORE_MATRIX_ROW_3_GPIO
+            int "Matrix row 3 GPIO"
+            range -1 39
+            default 18
+
+        config BEBOPCORE_MATRIX_COL_0_GPIO
+            int "Matrix col 0 GPIO"
+            range -1 39
+            default 13
+
+        config BEBOPCORE_MATRIX_COL_1_GPIO
+            int "Matrix col 1 GPIO"
+            range -1 39
+            default 12
+
+        config BEBOPCORE_MATRIX_COL_2_GPIO
+            int "Matrix col 2 GPIO"
+            range -1 39
+            default 14
+
+        config BEBOPCORE_MATRIX_COL_3_GPIO
+            int "Matrix col 3 GPIO"
+            range -1 39
+            default 27
+
+        config BEBOPCORE_MATRIX_COL_4_GPIO
+            int "Matrix col 4 GPIO"
+            range -1 39
+            default 26
+    endmenu
+
+    choice BEBOPCORE_DEFAULT_PROTOCOL
+        prompt "Default protocol"
+        default BEBOPCORE_DEFAULT_PROTOCOL_SWITCH
+
+        config BEBOPCORE_DEFAULT_PROTOCOL_SWITCH
+            bool "Switch"
+
+        config BEBOPCORE_DEFAULT_PROTOCOL_XINPUT
+            bool "XInput"
+
+        config BEBOPCORE_DEFAULT_PROTOCOL_DINPUT
+            bool "DInput"
+
+        config BEBOPCORE_DEFAULT_PROTOCOL_GENERIC
+            bool "Generic"
+    endchoice
+
+    config BEBOPCORE_PROTOCOL_HOLD_PAIRING_MS
+        int "SHIFT + PROTOCOL hold time for pairing (ms)"
+        range 200 10000
+        default 1200
+
+    config BEBOPCORE_RECOVERY_HOLD_MS
+        int "SHIFT + START hold time for recovery request (ms)"
+        range 500 15000
+        default 2000
+
+    menu "Battery"
+        config BEBOPCORE_BATTERY_ADC_ENABLED
+            bool "Enable battery ADC measurement"
+            default y
+
+        if BEBOPCORE_BATTERY_ADC_ENABLED
+
+        config BEBOPCORE_BATTERY_ADC_GPIO
+            int "Battery ADC GPIO"
+            range 32 39
+            default 35
+
+        config BEBOPCORE_BATTERY_DIVIDER_RATIO_MILLI
+            int "Battery divider ratio x1000"
+            range 1000 10000
+            default 2000
+            help
+                Example: use 2000 for a 2.0 divider ratio.
+
+        config BEBOPCORE_BATTERY_OFFSET_MV
+            int "Battery voltage offset (mV)"
+            range -1000 1000
+            default 0
+
+        endif
+    endmenu
+
+    config BEBOPCORE_POWER_LED_GPIO
+        int "Power LED GPIO"
+        range -1 39
+        default 2
+        help
+            Use -1 to disable the power LED output.
+
+    menu "Status LEDs"
+        config BEBOPCORE_LED_CONN_GPIO
+            int "Connection status LED GPIO"
+            range -1 39
+            default -1
+            help
+                LED that shows connection state.
+                IDLE=off, SEARCHING=slow blink, PAIRING=fast blink, CONNECTED=solid.
+                Use -1 to disable.
+
+        config BEBOPCORE_LED_PROTO_GPIO
+            int "Protocol indicator LED GPIO"
+            range -1 39
+            default -1
+            help
+                LED that blinks N times to indicate active protocol
+                (Switch=1, XInput=2, DInput=3, Generic=4).
+                Use -1 to disable.
+    endmenu
+
+    menu "Rumble"
+        config BEBOPCORE_RUMBLE_LEFT_GPIO
+            int "Left rumble motor GPIO"
+            range -1 33
+            default -1
+            help
+                Use -1 to disable left rumble output.
+
+        config BEBOPCORE_RUMBLE_RIGHT_GPIO
+            int "Right rumble motor GPIO"
+            range -1 33
+            default -1
+            help
+                Use -1 to disable right rumble output.
+
+        config BEBOPCORE_RUMBLE_LEFT_LEDC_CHANNEL
+            int "LEDC channel for left rumble (PWM)"
+            range 0 7
+            default 0
+            help
+                LEDC channel used for PWM rumble intensity on left motor.
+
+        config BEBOPCORE_RUMBLE_RIGHT_LEDC_CHANNEL
+            int "LEDC channel for right rumble (PWM)"
+            range 0 7
+            default 1
+            help
+                LEDC channel used for PWM rumble intensity on right motor.
+    endmenu
+
+    menu "Battery (extended)"
+        config BEBOPCORE_BATTERY_CHARGE_GPIO
+            int "Charging detect GPIO (active low)"
+            range -1 39
+            default -1
+            help
+                GPIO connected to a charger IC CHRG or STAT pin.
+                Pulled low while charging. Use -1 to disable.
+    endmenu
+
+endmenu
