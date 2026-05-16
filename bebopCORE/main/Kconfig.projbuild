@@ -122,6 +122,26 @@ menu "bebopCORE Configuration"
             int "PROTOCOL button GPIO"
             range -1 39
             default 5
+
+        config BEBOPCORE_GPIO_LSTICK_X_POS
+            int "Left stick X positive GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_LSTICK_X_NEG
+            int "Left stick X negative GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_LSTICK_Y_POS
+            int "Left stick Y positive GPIO"
+            range -1 39
+            default -1
+
+        config BEBOPCORE_GPIO_LSTICK_Y_NEG
+            int "Left stick Y negative GPIO"
+            range -1 39
+            default -1
     endmenu
 
     menu "Matrix backend pins"

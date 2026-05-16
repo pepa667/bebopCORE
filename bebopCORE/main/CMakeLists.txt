@@ -17,7 +17,8 @@ idf_component_register(
         "include"
     REQUIRES
         bt
-        esp_driver_gpio
+        esp_hid
+        driver
         esp_adc
         nvs_flash
 )

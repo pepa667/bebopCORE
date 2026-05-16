@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdint.h>
 
 #include "driver/gpio.h"
 #include "sdkconfig.h"
@@ -25,8 +26,17 @@
 #define BEBOPCORE_GPIO_BTN_STICK_RIGHT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_STICK_RIGHT)
 #define BEBOPCORE_GPIO_BTN_SHIFT ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_SHIFT)
 #define BEBOPCORE_GPIO_BTN_PROTOCOL ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_BTN_PROTOCOL)
+#define BEBOPCORE_GPIO_LSTICK_X_POS ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_LSTICK_X_POS)
+#define BEBOPCORE_GPIO_LSTICK_X_NEG ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_LSTICK_X_NEG)
+#define BEBOPCORE_GPIO_LSTICK_Y_POS ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_LSTICK_Y_POS)
+#define BEBOPCORE_GPIO_LSTICK_Y_NEG ((gpio_num_t)CONFIG_BEBOPCORE_GPIO_LSTICK_Y_NEG)
 
 static bool s_active_low = true;
+
+static const gpio_num_t s_left_stick_axis_pins[2][2] = {
+    {BEBOPCORE_GPIO_LSTICK_X_POS, BEBOPCORE_GPIO_LSTICK_X_NEG},
+    {BEBOPCORE_GPIO_LSTICK_Y_POS, BEBOPCORE_GPIO_LSTICK_Y_NEG},
+};
 
 static const gpio_num_t s_button_pins[BEBOPCORE_BUTTON_COUNT] = {
     [BEBOPCORE_BUTTON_A] = BEBOPCORE_GPIO_BTN_A,
@@ -51,6 +61,30 @@ static const gpio_num_t s_button_pins[BEBOPCORE_BUTTON_COUNT] = {
     [BEBOPCORE_BUTTON_PROTOCOL] = BEBOPCORE_GPIO_BTN_PROTOCOL,
 };
 
+static bool gpio_pin_pressed(gpio_num_t pin)
+{
+    if (pin < 0)
+    {
+        return false;
+    }
+
+    int level = gpio_get_level(pin);
+    return s_active_low ? (level == 0) : (level != 0);
+}
+
+static int16_t axis_from_button_pins(gpio_num_t positive_pin, gpio_num_t negative_pin)
+{
+    bool positive = gpio_pin_pressed(positive_pin);
+    bool negative = gpio_pin_pressed(negative_pin);
+
+    if (positive == negative)
+    {
+        return 0;
+    }
+
+    return positive ? INT16_MAX : INT16_MIN;
+}
+
 void input_gpio_init(bool active_low)
 {
     s_active_low = active_low;
@@ -71,6 +105,18 @@ void input_gpio_init(bool active_low)
         }
     }
 
+    for (int axis = 0; axis < 2; axis++)
+    {
+        for (int dir = 0; dir < 2; dir++)
+        {
+            gpio_num_t pin = s_left_stick_axis_pins[axis][dir];
+            if (pin >= 0)
+            {
+                cfg.pin_bit_mask |= (1ULL << pin);
+            }
+        }
+    }
+
     gpio_config(&cfg);
 }
 
@@ -85,7 +131,9 @@ void input_gpio_read(bebopCORE_input_state_t *state)
             continue;
         }
 
-        int level = gpio_get_level(s_button_pins[i]);
-        state->buttons[i] = s_active_low ? (level == 0) : (level != 0);
+        state->buttons[i] = gpio_pin_pressed(s_button_pins[i]);
     }
+
+    state->lx = axis_from_button_pins(BEBOPCORE_GPIO_LSTICK_X_POS, BEBOPCORE_GPIO_LSTICK_X_NEG);
+    state->ly = axis_from_button_pins(BEBOPCORE_GPIO_LSTICK_Y_POS, BEBOPCORE_GPIO_LSTICK_Y_NEG);
 }

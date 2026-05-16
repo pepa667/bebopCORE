@@ -1,0 +1,73 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bootloader/esp-idf/esptool_py && /Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python /Users/pepa/esp/esp-idf-v5.0/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bootloader/bootloader.bin
+Bootloader binary size 0x6390 bytes. 0xc70 bytes (11%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/bt_switch.c.obj
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable bebopCORE.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.7.0
+Creating esp32 image...
+Merged 25 ELF sections
+Successfully created esp32 image.
+Generated /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bebopCORE.bin
+[9/10] cd /Users/pepa/Desktop/bebopCORE/bebopCORE/build/esp-idf/esptool_py && /Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python /Users/pepa/esp/esp-idf-v5.0/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/pepa/Desktop/bebopCORE/bebopCORE/build/partition_table/partition-table.bin /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bebopCORE.bin
+bebopCORE.bin binary size 0xa1460 bytes. Smallest app partition is 0x200000 bytes. 0x15eba0 bytes (69%) free.
+[9/10] cd /Users/pepa/esp/esp-idf-v5.0/components/esptool_py && /usr/local/bin/cmake -D IDF_PATH=/Users/pepa/esp/esp-idf-v5.0 -D "SERIAL_TOOL=/Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python;;/Users/pepa/esp/esp-idf-v5.0/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/pepa/Desktop/bebopCORE/bebopCORE/build -P /Users/pepa/esp/esp-idf-v5.0/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/cu.usbserial-1420 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x10000 bebopCORE.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.7.0
+Serial port /dev/cu.usbserial-1420
+Connecting.......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 1c:69:20:31:76:98
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000b1fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 25488 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 25488 bytes (16358 compressed) at 0x00001000 in 0.6 seconds (effective 332.0 kbit/s)...
+Hash of data verified.
+Compressed 660576 bytes to 392414...
+Writing at 0x00010000... (4 %)
+Writing at 0x0001be6d... (8 %)
+Writing at 0x0002821b... (12 %)
+Writing at 0x00031bc5... (16 %)
+Writing at 0x0003738b... (20 %)
+Writing at 0x0003cf73... (25 %)
+Writing at 0x00042afb... (29 %)
+Writing at 0x000482fa... (33 %)
+Writing at 0x0004e9a7... (37 %)
+Writing at 0x00054298... (41 %)
+Writing at 0x00059d6e... (45 %)
+Writing at 0x0005fad7... (50 %)
+Writing at 0x00065bf3... (54 %)
+Writing at 0x0006b91f... (58 %)
+Writing at 0x0007145c... (62 %)
+Writing at 0x000772f7... (66 %)
+Writing at 0x0007d6c8... (70 %)
+Writing at 0x0008367d... (75 %)
+Writing at 0x0008a216... (79 %)
+Writing at 0x00092d3a... (83 %)
+Writing at 0x0009a414... (87 %)
+Writing at 0x000a0373... (91 %)
+Writing at 0x000a5966... (95 %)
+Writing at 0x000ab8cc... (100 %)
+Wrote 660576 bytes (392414 compressed) at 0x00010000 in 10.0 seconds (effective 527.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 118...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (118 compressed) at 0x00008000 in 0.0 seconds (effective 778.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -5,7 +5,7 @@
 #include "bebopCORE_types.h"
 
 void protocol_manager_init(void);
-void protocol_manager_next(void);
+bool protocol_manager_next(void);
 void protocol_manager_enter_pairing(void);
 void protocol_manager_reset_pairing(void);
 bebopCORE_protocol_t protocol_manager_get_active(void);

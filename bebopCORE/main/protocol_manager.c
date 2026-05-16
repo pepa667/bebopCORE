@@ -55,7 +55,7 @@ void protocol_manager_init(void)
     ESP_LOGI(TAG, "Protocol manager initialized in single-firmware mode (%s)", protocol_manager_get_active_name());
 }
 
-void protocol_manager_next(void)
+bool protocol_manager_next(void)
 {
     bebopCORE_protocol_t next_protocol = s_active_protocol;
 
@@ -64,11 +64,18 @@ void protocol_manager_next(void)
         next_protocol = (next_protocol + 1) % BEBOPCORE_PROTOCOL_COUNT;
     } while (next_protocol != s_active_protocol && !protocol_is_supported(next_protocol));
 
-    s_active_protocol = normalize_protocol(next_protocol);
+    next_protocol = normalize_protocol(next_protocol);
+    if (next_protocol == s_active_protocol)
+    {
+        return false;
+    }
+
+    s_active_protocol = next_protocol;
     s_connection_state = BEBOPCORE_CONN_SEARCHING;
     app_state_set_protocol(s_active_protocol);
     storage_save_active_protocol(s_active_protocol);
     ESP_LOGI(TAG, "Protocol switched to %s", protocol_manager_get_active_name());
+    return true;
 }
 
 void protocol_manager_enter_pairing(void)

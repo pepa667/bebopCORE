@@ -1,0 +1,16 @@
+/Users/pepa/esp/esp-idf-v5.0/tools/check_python_dependencies.py:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Executing action: all (aliases: build)
+Running ninja in directory /Users/pepa/Desktop/bebopCORE/bebopCORE/build
+Executing "ninja all"...
+[1/4] cd /Users/pepa/Desktop/bebopCORE/bebopCORE/build/esp-idf/esptool_py && /Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python /Users/pepa/esp/esp-idf-v5.0/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/pepa/Desktop/bebopCORE/bebopCORE/build/partition_table/partition-table.bin /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bebopCORE.bin
+bebopCORE.bin binary size 0x9fd20 bytes. Smallest app partition is 0x200000 bytes. 0x1602e0 bytes (69%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bootloader/esp-idf/esptool_py && /Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python /Users/pepa/esp/esp-idf-v5.0/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/pepa/Desktop/bebopCORE/bebopCORE/build/bootloader/bootloader.bin
+Bootloader binary size 0x6390 bytes. 0xc70 bytes (11%) free.
+[3/4] No install step for 'bootloader'
+[4/4] Completed 'bootloader'
+
+Project build complete. To flash, run this command:
+/Users/pepa/.espressif/python_env/idf5.0_py3.8_env/bin/python ../../../esp/esp-idf-v5.0/components/esptool_py/esptool/esptool.py -p (PORT) -b 460800 --before default_reset --after hard_reset --chip esp32  write_flash --flash_mode dio --flash_size 4MB --flash_freq 40m 0x1000 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0x10000 build/bebopCORE.bin
+or run 'idf.py -p (PORT) flash'

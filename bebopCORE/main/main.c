@@ -78,9 +78,11 @@ static void apply_system_buttons(void)
         }
         else
         {
-            protocol_manager_next();
-            bt_manager_switch_protocol(protocol_manager_get_active());
-            status_leds_set_protocol_change_pulse();
+            if (protocol_manager_next())
+            {
+                bt_manager_switch_protocol(protocol_manager_get_active());
+                status_leds_set_protocol_change_pulse();
+            }
         }
     }
 

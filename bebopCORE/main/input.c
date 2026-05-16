@@ -1,15 +1,104 @@
 #include <string.h>
 
+#include "esp_log.h"
 #include "esp_timer.h"
 
 #include "input.h"
 #include "input_gpio.h"
 #include "input_matrix.h"
 
+static const char *TAG = "bebopCORE_input";
+
 static bebopCORE_input_backend_t s_backend = BEBOPCORE_INPUT_BACKEND_GPIO;
 static bebopCORE_input_state_t s_curr_state;
 static bebopCORE_input_state_t s_prev_state;
 static uint64_t s_hold_start_us[BEBOPCORE_BUTTON_COUNT];
+
+static const char *s_button_names[BEBOPCORE_BUTTON_COUNT] = {
+    [BEBOPCORE_BUTTON_A] = "A",
+    [BEBOPCORE_BUTTON_B] = "B",
+    [BEBOPCORE_BUTTON_X] = "X",
+    [BEBOPCORE_BUTTON_Y] = "Y",
+    [BEBOPCORE_BUTTON_DPAD_RIGHT] = "RIGHT",
+    [BEBOPCORE_BUTTON_DPAD_DOWN] = "DOWN",
+    [BEBOPCORE_BUTTON_DPAD_LEFT] = "LEFT",
+    [BEBOPCORE_BUTTON_DPAD_UP] = "UP",
+    [BEBOPCORE_BUTTON_L] = "L",
+    [BEBOPCORE_BUTTON_ZL] = "ZL",
+    [BEBOPCORE_BUTTON_R] = "R",
+    [BEBOPCORE_BUTTON_ZR] = "ZR",
+    [BEBOPCORE_BUTTON_START] = "START",
+    [BEBOPCORE_BUTTON_SELECT] = "SELECT",
+    [BEBOPCORE_BUTTON_HOME] = "HOME",
+    [BEBOPCORE_BUTTON_CAPTURE] = "CAPTURE",
+    [BEBOPCORE_BUTTON_STICK_LEFT] = "L3",
+    [BEBOPCORE_BUTTON_STICK_RIGHT] = "R3",
+    [BEBOPCORE_BUTTON_SHIFT] = "SHIFT",
+    [BEBOPCORE_BUTTON_PROTOCOL] = "PROTOCOL",
+};
+
+static void input_format_pressed_buttons(const bebopCORE_input_state_t *state,
+                                         char *buffer,
+                                         size_t buffer_size)
+{
+    size_t used = 0;
+
+    if (buffer_size == 0)
+    {
+        return;
+    }
+
+    buffer[0] = '\0';
+
+    for (int i = 0; i < BEBOPCORE_BUTTON_COUNT; i++)
+    {
+        int written;
+
+        if (!state->buttons[i] || s_button_names[i] == NULL)
+        {
+            continue;
+        }
+
+        written = snprintf(buffer + used,
+                           buffer_size - used,
+                           "%s%s",
+                           used == 0 ? "" : ",",
+                           s_button_names[i]);
+        if (written < 0)
+        {
+            return;
+        }
+
+        if ((size_t)written >= (buffer_size - used))
+        {
+            used = buffer_size - 1;
+            break;
+        }
+
+        used += (size_t)written;
+    }
+
+    if (used == 0)
+    {
+        snprintf(buffer, buffer_size, "-");
+    }
+}
+
+static void input_log_state_change(const bebopCORE_input_state_t *state)
+{
+    char pressed[128];
+
+    input_format_pressed_buttons(state, pressed, sizeof(pressed));
+    ESP_LOGI(TAG,
+             "buttons=%s lx=%d ly=%d rx=%d ry=%d lt=%u rt=%u",
+             pressed,
+             state->lx,
+             state->ly,
+             state->rx,
+             state->ry,
+             (unsigned int)state->lt,
+             (unsigned int)state->rt);
+}
 
 static void input_backend_read(bebopCORE_input_state_t *state)
 {
@@ -53,6 +142,11 @@ void input_update(void)
 
     s_prev_state = s_curr_state;
     input_backend_read(&s_curr_state);
+
+    if (memcmp(&s_prev_state, &s_curr_state, sizeof(s_curr_state)) != 0)
+    {
+        input_log_state_change(&s_curr_state);
+    }
 
     for (int i = 0; i < BEBOPCORE_BUTTON_COUNT; i++)
     {

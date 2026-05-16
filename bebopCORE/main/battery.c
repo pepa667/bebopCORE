@@ -8,6 +8,12 @@
 
 static const char *TAG = "bebopCORE_battery";
 
+#ifdef ADC_ATTEN_DB_12
+#define BEBOPCORE_BATTERY_ADC_ATTEN ADC_ATTEN_DB_12
+#else
+#define BEBOPCORE_BATTERY_ADC_ATTEN ADC_ATTEN_DB_11
+#endif
+
 static bebopCORE_battery_config_t s_config;
 static bool s_initialized = false;
 static uint8_t s_percent = 100;
@@ -68,7 +74,7 @@ void battery_init(const bebopCORE_battery_config_t *config)
     ESP_ERROR_CHECK(adc_oneshot_new_unit(&init_cfg, &s_adc_handle));
 
     adc_oneshot_chan_cfg_t chan_cfg = {
-        .atten = ADC_ATTEN_DB_12,
+        .atten = BEBOPCORE_BATTERY_ADC_ATTEN,
         .bitwidth = ADC_BITWIDTH_DEFAULT,
     };
     ESP_ERROR_CHECK(adc_oneshot_config_channel(s_adc_handle, s_adc_channel, &chan_cfg));

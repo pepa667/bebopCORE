@@ -1,3 +1,4 @@
 {
-  "idf.currentSetup": "/Users/pepa/esp/v5.0/esp-idf"
+  "idf.currentSetup": "/Users/pepa/esp/v5.0/esp-idf",
+  "cmake.sourceDirectory": "/Users/pepa/Desktop/bebopCORE/bebopCORE"
 }
