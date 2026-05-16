@@ -9,3 +9,11 @@
 [submodule "fw_v2"]
 	path = fw_v2
 	url = git@github.com:pepa667/BluControl-ESP32.git
+[submodule "BluControl-ESP32"]
+	path = BluControl-ESP32
+	url = git@github.com:pepa667/BluControl-ESP32.git
+	branch = restart
+[submodule "fw_v3"]
+	path = fw_v3
+	url = git@github.com:HandHeldLegend/HOJA-ESP32-Baseband.git
+	branch = master
